@@ -11,52 +11,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+
 </head>
 
 <body class="text-white bg-black">
 
-    <!-- Hero Section com gradiente escuro inferior -->
-    <section
-        class="hero-section relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+<!-- Hero Section com gradiente escuro inferior -->
+<section
+  class="hero-section relative h-screen flex flex-col items-center justify-center text-center text-white overflow-hidden">
 
-        <!-- Gradiente escuro na parte inferior -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+  <!-- Gradiente escuro na parte inferior -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/60 to-transparent"></div>
 
-        <!-- Canvas beams (mantido se quiser o efeito visual) -->
-        <canvas id="beams" class="absolute inset-0 opacity-30"></canvas>
+  <!-- Canvas beams opcional -->
+  <canvas id="beams" class="absolute inset-0 opacity-30"></canvas>
 
-        <!-- Conteúdo principal -->
-        <div class="relative z-10 flex flex-col items-center px-4 sm:px-6 md:px-12 max-w-3xl mx-auto">
-            <!-- Logo -->
-            <img src="assets/images.png" alt="Logo V Lopes Motos Peças"
-                class="w-32 sm:w-40 md:w-52 mb-4 sm:mb-6 drop-shadow-lg rounded-full border-4 border-white/20">
+  <!-- Conteúdo principal -->
+  <div class="relative z-10 flex flex-col items-center px-4 sm:px-6 md:px-12 max-w-3xl mx-auto">
 
-            <!-- Título -->
-            <h1
-                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight drop-shadow-md px-2">
-                Qualidade e confiança <span class="text-yellow-400">sobre duas rodas</span>
-            </h1>
+    <!-- Logo -->
+    <img src="assets/images.png" alt="Logo V Lopes Motos Peças"
+      class="w-32 sm:w-40 md:w-52 mb-4 sm:mb-6 drop-shadow-lg rounded-full border-4 border-white/20">
 
-            <!-- Subtítulo -->
-            <p
-                class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 mt-2 sm:mt-4 leading-snug px-2">
-                Capacetes, peças, acessórios e serviços — tudo o que sua moto precisa em um só lugar.
-            </p>
+    <!-- Título -->
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-extrabold tracking-tight drop-shadow-md leading-tight">
+      Qualidade e confiança <span class="text-yellow-400">sobre duas rodas,</span> movendo sua paixão por motos com
+      segurança.
+    </h1>
 
-            <!-- Chamada -->
-            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mt-1 sm:mt-2 italic px-2">
-                "A diferente dos iguais!"
-            </p>
+    <!-- Subtítulo -->
+    <p class="text-gray-200 mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-relaxed">
+      Há mais de <span class="font-semibold text-yellow-400">11 anos</span> no mercado, a <span
+        class="font-semibold text-red-500">V Lopes Motos Peças</span> entrega acessórios, peças e serviços com a melhor
+      qualidade do mercado. Trabalhamos com as melhores marcas e uma equipe especializada para garantir a performance
+      que sua moto merece.
+    </p>
 
-            <!-- Botão WhatsApp - RESPONSIVO -->
-            <div class="mt-6 sm:mt-8 floating w-full max-w-xs sm:max-w-sm md:max-w-md">
-                <a href="https://wa.me/5588996256876?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20V%20Lopes%20Motos%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20ou%20mais%20informa%C3%A7%C3%B5es." target="_blank"
-                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow w-full">
-                    <i class="fab fa-whatsapp mr-2 sm:mr-3"></i> Fale conosco
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Chamada menor -->
+    <p class="text-gray-300 mt-2 italic text-sm sm:text-base">
+      Atendimento rápido, confiança e o cuidado que só quem entende de moto pode oferecer.
+    </p>
+
+    <!-- Avatares de clientes -->
+    <div
+      class="flex items-center justify-center space-x-[-10px] sm:space-x-[-15px] mt-6 sm:mt-8 border border-red-500 rounded-full px-3 py-2 bg-black/30 backdrop-blur-md">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-red-500 object-cover">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-red-500 object-cover">
+      <img src="https://randomuser.me/api/portraits/men/12.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-red-500 object-cover">
+      <img src="https://randomuser.me/api/portraits/women/67.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-red-500 object-cover">
+      <img src="https://randomuser.me/api/portraits/men/84.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-red-500 object-cover">
+    </div>
+
+    <!-- Botão WhatsApp -->
+    <div class="mt-6 sm:mt-8 w-full max-w-xs sm:max-w-sm md:max-w-md">
+      <a href="https://wa.me/5588996256876?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20V%20Lopes%20Motos%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20ou%20mais%20informa%C3%A7%C3%B5es."
+        target="_blank"
+        class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow">
+        <i class="fab fa-whatsapp mr-3"></i> Fale conosco pelo WhatsApp!
+      </a>
+    </div>
+
+    <!-- Endereço -->
+    <div class="mt-6 text-gray-300 flex items-center justify-center space-x-2 text-sm sm:text-base">
+      <i class="fa-solid fa-location-dot text-red-500"></i>
+      <span>Av: José do patrocínio 918 – Itapipoca/CE  </span>
+    </div>
+  </div>
+</section>
 
         <!-- Seção de Serviços -->
 <section class="bg-gradient-to-b from-[#1a1a1a] via-[#b91c1c] to-[#dc2626] py-16 px-6">
@@ -69,7 +91,7 @@
 
     <!-- Texto Lateral -->
     <div class="w-full md:w-1/2 text-center md:text-left">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-6 tracking-tight">
         Tudo em Peças e Acessórios <br class="hidden md:block">para sua Moto
       </h2>
 
@@ -93,203 +115,76 @@
   </div>
 </section>
 
+<!-- Seção de Produtos (com animações) -->
+<section id="produtos" class="bg-black py-16 px-6">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+      ALGUNS DOS NOSSOS <span class="text-red-500">PRODUTOS</span>
+    </h1>
+    <p class="text-gray-400 mt-3 text-lg">
+      Confiança, qualidade e desempenho em cada produto.
+    </p>
+  </div>
 
-    <!-- Seção de Produtos -->
-    <section id="produtos" class="relative">
+  <!-- Grid de cards -->
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
 
-        <div class="text-center py-16 px-4">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg">
-                ALGUNS DOS NOSSOS <span class="text-yellow-500">PRODUTOS</span>
-            </h1>
-            <p class="text-gray-400 text-lg mt-3">
-                Qualidade, durabilidade e segurança em cada peça.
-            </p>
-        </div>
+    <!-- Card 1 -->
+    <div class="card opacity-0 translate-x-[-80px] bg-neutral-900 rounded-xl overflow-hidden shadow-lg">
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fbr%2Fphoto%2Fmotorcycle-with-worker-at-the-workshop-317119832.html&psig=AOvVaw0GVl8CpFo2k0COdq6ARJ1H&ust=1760299124903000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLC_k773nJADFQAAAAAdAAAAABAE" alt="Revisão e Mecânica Geral" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2 border-b border-red-500 pb-2">CAPACETES E ACESSÓRIOS</h3>
+        <p class="text-gray-400 text-sm">Proteção e estilo para quem vive sobre duas rodas.</p>
+      </div>
+    </div>
 
-        <!-- Seção 1 -->
-        <section class="parallax-section px-3">
-            <div class="sticky-image"
-                style="background-image: url('assets/Capacetes.jpeg');">
-                <div class="overlay-dark"></div>
-                <div class="overlay-text">
-                    <p class="text-xl md:text-2xl mb-2">Capacetes e Acessórios</p>
-                    <p class="text-3xl md:text-5xl font-bold">Proteção e estilo para sua moto</p>
-                </div>
-            </div>
-            <div class="content-block">
-                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Segurança com conforto e design</h2>
-                <div>
-                    <p class="mb-6 text-lg text-gray-300">
-                        Oferecemos <span class="text-blue-700 font-semibold">capacetes</span> de alta qualidade e
-                        acessórios essenciais para motociclistas, garantindo proteção e estilo em cada passeio.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Capacetes homologados e confortáveis
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Luvas, jaquetas e coletes com proteção
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Óculos e protetores de ouvido para segurança total
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Card 2 -->
+    <div class="card opacity-0 translate-x-[80px] bg-neutral-900 rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/Oleos.jpeg" alt="Motor e câmbio" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2 border-b border-red-500 pb-2">ÓLEOS E LUBRIFICANTES</h3>
+        <p class="text-gray-400 text-sm">desempenho e vida longa para o motor da sua moto.</p>
+      </div>
+    </div>
 
-        <!-- Seção 2 -->
-        <section class="parallax-section px-3">
-            <div class="sticky-image"
-                style="background-image: url('assets/Pneus.jpeg');">
-                <div class="overlay-dark"></div>
-                <div class="overlay-text">
-                    <p class="text-xl md:text-2xl mb-2">Pneus e Câmaras de Ar</p>
-                    <p class="text-3xl md:text-5xl font-bold">Segurança e aderência em cada curva</p>
-                </div>
-            </div>
-            <div class="content-block">
-                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Qualidade que mantém você na pista</h2>
-                <div>
-                    <p class="mb-6 text-lg text-gray-300">
-                        Trabalhamos com as melhores marcas de pneus e câmaras de ar, garantindo desempenho e segurança
-                        em qualquer terreno.
-                    </p>
-                    <p class="mb-8 text-lg text-gray-300">
-                        Aqui você encontra o equilíbrio perfeito entre durabilidade, tração e conforto — do asfalto à
-                        trilha.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Pneus para todos os tipos de moto
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Marcas premium nacionais e importadas
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Instalação profissional inclusa
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Card 3 -->
+    <div class="card opacity-0 translate-x-[-80px] bg-neutral-900 rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/Pneus.jpeg" alt="Pneus e câmaras" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2 border-b border-red-500 pb-2">PNEUS E CÂMARAS DE AR</h3>
+        <p class="text-gray-400 text-sm">Adereencia e estabilidade em qualquer terreno.</p>
+      </div>
+    </div>
 
-        <!-- Seção 3 -->
-        <section class="parallax-section px-3">
-            <div class="sticky-image"
-                style="background-image: url('assets/Oleos.jpeg');">
-                <div class="overlay-dark"></div>
-                <div class="overlay-text">
-                    <p class="text-xl md:text-2xl mb-2">Óleo + Troca</p>
-                    <p class="text-3xl md:text-5xl font-bold">Cuidado completo para seu motor</p>
-                </div>
-            </div>
-            <div class="content-block">
-                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Troca rápida e eficiente</h2>
-                <div>
-                    <p class="mb-6 text-lg text-gray-300">
-                        Utilizamos óleos lubrificantes de alta performance para garantir a vida útil e o rendimento
-                        máximo do seu motor.
-                    </p>
-                    <p class="mb-8 text-lg text-gray-300">
-                        Faça sua troca conosco e sinta a diferença na resposta do acelerador.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Óleos sintéticos e mineral
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Filtros originais
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Troca rápida em 30 minutos
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Card 4 -->
+    <div class="card opacity-0 translate-x-[80px] bg-neutral-900 rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/Oleos.jpeg" alt="Óleo e troca" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2 border-b border-red-500 pb-2">BATERIAS E CABOS</h3>
+        <p class="text-gray-400 text-sm">Energia e confiança para o seu dia a dia.</p>
+      </div>
+    </div>
 
-        <!-- Seção 4 -->
-        <section class="parallax-section px-3">
-            <div class="sticky-image"
-                style="background-image: url('assets/Servicos.jpeg');">
-                <div class="overlay-dark"></div>
-                <div class="overlay-text">
-                    <p class="text-xl text-blue-600 md:text-2xl mb-2">Kits de Transmissão</p>
-                    <p class="text-3xl md:text-5xl font-bold">Potência sem perda</p>
-                </div>
-            </div>
-            <div class="content-block">
-                <h2 class="text-3xl font-bold mb-6 text-white">Durabilidade e desempenho</h2>
-                <div>
-                    <p class="mb-6 text-lg text-gray-300">
-                        Kits de transmissão completos, com corrente, pinhão e coroa das melhores marcas.
-                    </p>
-                    <p class="mb-8 text-lg text-gray-300">
-                        Aproveite o torque máximo da sua moto e evite desgastes prematuros.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Correntes importadas de alta resistência
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Pinhão e coroa em aço tratado
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Garantia de 6 meses
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Card 5 -->
+    <div class="card opacity-0 translate-x-[-80px] bg-neutral-900 rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/Kits.jpeg" alt="Kits de transmissão" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2 border-b border-red-500 pb-2">KITS DE TRANSMISSÃO</h3>
+        <p class="text-gray-400 text-sm">Potência sem perda e máxima durabilidade em cada aceleração.</p>
+      </div>
+    </div>
 
+    <!-- Card 6 -->
+    <div class="card opacity-0 translate-x-[80px] bg-neutral-900  rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/Pecas.jpeg" alt="Peças e revisões" class="h-48 w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2 border-b border-red-500 pb-2">PEÇAS E REVISÕES</h3>
+        <p class="text-gray-400 text-sm">Tudo o que sua moto precisa em um só lugar.</p>
+      </div>
+    </div>
 
-        <!-- Seção 5 -->
-        <section class="parallax-section px-3">
-            <div class="sticky-image"
-                style="background-image: url('https://img.freepik.com/fotos-premium/tecnico-de-homem-reparando-motocicleta-usando-chave-enquanto-trabalhava-na-oficina-de-reparacao-manutencao-profissional-do-conceito-de-moto-moderno-e-antigo_266732-33607.jpg?semt=ais_hybrid&w=740&q=80');">
-                <div class="overlay-dark"></div>
-                <div class="overlay-text">
-                    <p class="text-xl md:text-2xl mb-2">Peças e Revisões</p>
-                    <p class="text-3xl md:text-5xl font-bold">Cabos, baterias e motor</p>
-                </div>
-            </div>
-            <div class="content-block">
-                <h2 class="text-3xl font-bold mb-6 text-white">Tudo o que sua moto precisa</h2>
-                <div>
-                    <p class="mb-6 text-lg text-gray-300">
-                        Revisões com preço especial e peças originais para manter sua moto com o melhor desempenho.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Baterias seladas e convencionais
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Cabos de aceleração e embreagem
-                        </li>
-                        <li class="flex items-center">
-                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                            Revisão completa com laudo técnico
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </section>
+  </div>
+</section>
 
     <!-- Seção Sobre Nós -->
     <div class="bg-white">
@@ -304,7 +199,7 @@
 
             <!-- Texto -->
             <div class="flex-1 text-center md:text-left">
-                <h2 class="text-4xl font-extrabold mb-6 text-black drop-shadow-lg">
+                <h2 class="text-4xl font-extrabold mb-6 text-black drop-shadow-lg tracking-tight">
                     Sobre a <span class="text-yellow-400">V Lopes Moto Peças</span>
                 </h2>
                 <p class="text-black text-lg leading-relaxed mb-4">
@@ -330,7 +225,7 @@
 
 
         <section class="bg-white text-gray-800 py-16 px-4 flex flex-col items-center justify-center min-h-screen">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center tracking-tight">
                 O QUE <span class="text-yellow-500">NOSSOS CLIENTES</span> DIZEM SOBRE NÓS?
             </h2>
 
@@ -347,12 +242,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva"
+                                            <img src="https://instagram.ffor50-1.fna.fbcdn.net/v/t51.2885-19/560572372_18405233923188529_4002266685637498106_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.ffor50-1.fna.fbcdn.net&_nc_cat=101&_nc_oc=Q6cZ2QHU_ojBOppFoMrn6xwrkoev5N7gDk3T-i_iUPPPtrSkmroxKnRzU-N8fFGqshEC67jE3gX8Yzvyukp2F18MMza1&_nc_ohc=rqa28f8Pb08Q7kNvwFg9eK_&_nc_gid=ctHh2-UFQqypMA1uvojyTw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfdANWRAQ-CN1Ex-3q1qDjBrOcehFdluOBESSRh4MSaHEg&oe=68F08402&_nc_sid=7a9f4b" alt="Mirele Santos"
                                                 class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Carlos Silva
+                                                Mirele Santos
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -376,12 +271,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos"
+                                            <img src="https://instagram.ffor50-1.fna.fbcdn.net/v/t51.2885-19/487836427_634725106006450_6788029953272616242_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.ffor50-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QG0xFb0B3h8ZEQ0sRTI3XZhzLiHRJOk8snzjAVcuWSuVoH_jV9wYtQlp3QXZW4OZhCmISwJH4w_2maSlckTdOUs&_nc_ohc=gwm30HsDoWAQ7kNvwHIMxLd&_nc_gid=Kg2AMmh2iS1CDWbFkwHgtw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfdcNP4srDzWhc7C844WXh4qH4Ol6g6noOAeF4lZqFuU2g&oe=68F06D62&_nc_sid=7a9f4b" alt="Marcio Junior"
                                                 class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Ana Santos
+                                                Marcio Junior
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -437,12 +332,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva"
+                                            <img src="https://instagram.ffor50-1.fna.fbcdn.net/v/t51.2885-19/560572372_18405233923188529_4002266685637498106_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.ffor50-1.fna.fbcdn.net&_nc_cat=101&_nc_oc=Q6cZ2QHU_ojBOppFoMrn6xwrkoev5N7gDk3T-i_iUPPPtrSkmroxKnRzU-N8fFGqshEC67jE3gX8Yzvyukp2F18MMza1&_nc_ohc=rqa28f8Pb08Q7kNvwFg9eK_&_nc_gid=ctHh2-UFQqypMA1uvojyTw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfdANWRAQ-CN1Ex-3q1qDjBrOcehFdluOBESSRh4MSaHEg&oe=68F08402&_nc_sid=7a9f4b" alt="Mirele Santos"
                                                 class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Carlos Silva
+                                                Mirele Santos
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -466,12 +361,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos"
+                                            <img src="https://instagram.ffor50-1.fna.fbcdn.net/v/t51.2885-19/487836427_634725106006450_6788029953272616242_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.ffor50-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QG0xFb0B3h8ZEQ0sRTI3XZhzLiHRJOk8snzjAVcuWSuVoH_jV9wYtQlp3QXZW4OZhCmISwJH4w_2maSlckTdOUs&_nc_ohc=gwm30HsDoWAQ7kNvwHIMxLd&_nc_gid=Kg2AMmh2iS1CDWbFkwHgtw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfdcNP4srDzWhc7C844WXh4qH4Ol6g6noOAeF4lZqFuU2g&oe=68F06D62&_nc_sid=7a9f4b" alt="Marcio Junior"
                                                 class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Ana Santos
+                                                Marcio Junior
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -711,12 +606,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/men/85.jpg"
-                                                alt="Ricardo Ferreira" class="w-full h-full object-cover">
+                                            <img src="https://instagram.ffor50-1.fna.fbcdn.net/v/t51.2885-19/487836427_634725106006450_6788029953272616242_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.ffor50-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QG0xFb0B3h8ZEQ0sRTI3XZhzLiHRJOk8snzjAVcuWSuVoH_jV9wYtQlp3QXZW4OZhCmISwJH4w_2maSlckTdOUs&_nc_ohc=gwm30HsDoWAQ7kNvwHIMxLd&_nc_gid=Kg2AMmh2iS1CDWbFkwHgtw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfdcNP4srDzWhc7C844WXh4qH4Ol6g6noOAeF4lZqFuU2g&oe=68F06D62&_nc_sid=7a9f4b" alt="Marcio Junior"
+                                               class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Ricardo Ferreira
+                                                Marcio Junior
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -740,12 +635,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
-                                                alt="Juliana Rocha" class="w-full h-full object-cover">
+                                            <img src="assets/perfil03.jpg"
+                                                alt="Mirele Julia" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Juliana Rocha
+                                                Mirele Julia
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -769,12 +664,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Lucas Mendes"
+                                            <img src="assets/perfil02.jpg" alt="Yuri Lima"
                                                 class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Lucas Mendes
+                                                Yuri Lima
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -801,12 +696,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/men/85.jpg"
-                                                alt="Ricardo Ferreira" class="w-full h-full object-cover">
+                                            <img src="assets/Perfil01.jpg"
+                                                alt="Marcio Junior" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Ricardo Ferreira
+                                                Marcio Junior
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -830,12 +725,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
-                                                alt="Juliana Rocha" class="w-full h-full object-cover">
+                                            <img src="assets/perfil03.jpg"
+                                                alt="Mirele Julia" class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Juliana Rocha
+                                                Mirele Julia
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -859,12 +754,12 @@
                                 <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
                                     <div class="flex items-center gap-2.5">
                                         <div class="w-9 h-9 rounded-full overflow-hidden">
-                                            <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Lucas Mendes"
+                                            <img src="assets/perfil02.jpg" alt="Yuri Lima"
                                                 class="w-full h-full object-cover">
                                         </div>
                                         <div class="flex flex-col">
                                             <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
-                                                Lucas Mendes
+                                                Yuri Lima
                                             </div>
                                             <div class="flex items-center mt-1">
                                                 <div class="flex text-yellow-400">
@@ -1102,7 +997,7 @@
         <section class="relative flex min-h-screen flex-col bg-white text-black">
             <div class="flex items-center justify-center p-6">
                 <div class="w-full max-w-2xl space-y-6">
-                    <h2 class="text-xl font-bold text-black text-center">Perguntas Frequentes</h2>
+                    <h2 class="text-xl font-bold text-black text-center tracking-tight">Perguntas Frequentes</h2>
                     <div
                         class="accordion-container h-full w-full rounded-2xl border border-dotted border-gray-300 px-6 bg-white shadow-sm">
                         <!-- Accordion Item 1 -->
@@ -1124,9 +1019,9 @@
                                 </button>
                             </div>
                             <div class="accordion-content text-gray-600 px-2 pb-2" data-state="closed">
-                                <p class="">De segunda a sexta, atendemos das 8h às 18h.</p>
-                                <p class="">Aos sábados, abrimos das 8h às 14h.</p>
-                                <p class="pb-4">Domingos e feriados estamos fechados.</p>
+                                <p class="">De segunda a sexta, atendemos das 07h15 às 17h.</p>
+                                <p class="">Aos sábados, abrimos das 7h15 às 18h.</p>
+                                <p class="pb-4">Domingos estamos fechados.</p>
                             </div>
                         </div>
                     </div>
@@ -1137,7 +1032,7 @@
             <section class="bg-white py-20 px-6">
                 <div class="max-w-6xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-gray-900">
-                        <span class="text-yellow-500">Nossa Localização</span>
+                        <span class="text-yellow-500 tracking-tight">NOSSA LOCALIZAÇÃO</span>
                     </h2>
 
                     <div class="flex flex-col lg:flex-row items-start lg:items-center gap-12">
@@ -1209,6 +1104,20 @@
                     </div>
                 </div>
             </footer>
+            <script>
+              const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-fadeInMove");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach((card) => observer.observe(card));
+            </script>
             <script src="js/parallaxEfeito.js.js"></script>
             <script src="js/dataAtual.js"></script>
             <script src="js/beamsHero.js"></script>
