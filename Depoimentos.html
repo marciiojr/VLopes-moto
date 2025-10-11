@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vlopes Motos | Acessórios e Peças de Alta Performance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+</head>
+<body>
+<div class="bg-gray-900">
+
+<section class="bg-black bg-opacity-95 text-white py-16 px-4 flex flex-col items-center justify-center min-h-screen">
+  <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-white">
+    O QUE <span class="text-yellow-400">NOSSOS CLIENTES</span> DIZEM SOBRE NÓS?
+  </h2>
+
+  <!-- Container 3D com depoimentos -->
+  <div class="border border-gray-700 rounded-lg relative flex h-96 w-full max-w-[800px] flex-row items-center justify-center overflow-hidden gap-1.5" style="perspective: 300px;">
+    <div class="flex flex-row items-center gap-4" style="transform: translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg);">
+      <!-- Coluna 1 - Marquee Vertical (para baixo) -->
+      <div class="group flex flex-col overflow-hidden p-2 h-full">
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Carlos Silva <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@carlos_silva</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Os acessórios da Vlopes transformaram minha moto completamente!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Ana Santos <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@ana_santos</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Qualidade excepcional e entrega rápida. Recomendo!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Roberto Alves" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Roberto Alves <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@roberto_alves</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Melhor custo-benefício do mercado de peças para motos.</blockquote>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Repetição para efeito contínuo -->
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation">
+          <!-- Card 1 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Carlos Silva <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@carlos_silva</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Os acessórios da Vlopes transformaram minha moto completamente!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Ana Santos <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@ana_santos</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Qualidade excepcional e entrega rápida. Recomendo!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Roberto Alves" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Roberto Alves <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@roberto_alves</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Melhor custo-benefício do mercado de peças para motos.</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 - Marquee Vertical (para cima) -->
+      <div class="group flex flex-col overflow-hidden p-2 h-full">
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation animation-reverse">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/53.jpg" alt="Mariana Costa" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Mariana Costa <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@mariana_costa</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Atendimento excelente e produtos de alta qualidade!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Pedro Lima" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Pedro Lima <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@pedro_lima</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Encontrei peças que não achava em lugar nenhum. Vlopes é top!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Fernando Souza" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Fernando Souza <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@fernando_souza</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Produtos duráveis e com ótimo acabamento. Nota 10!</blockquote>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Repetição para efeito contínuo -->
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation animation-reverse">
+          <!-- Card 1 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/53.jpg" alt="Mariana Costa" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Mariana Costa <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@mariana_costa</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Atendimento excelente e produtos de alta qualidade!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Pedro Lima" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Pedro Lima <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@pedro_lima</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Encontrei peças que não achava em lugar nenhum. Vlopes é top!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Fernando Souza" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Fernando Souza <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@fernando_souza</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Produtos duráveis e com ótimo acabamento. Nota 10!</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 3 - Marquee Vertical (para baixo) -->
+      <div class="group flex flex-col overflow-hidden p-2 h-full">
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Ricardo Ferreira" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Ricardo Ferreira <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@ricardo_ferreira</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Peças originais e com garantia. Confiança total!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Juliana Rocha" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Juliana Rocha <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@juliana_rocha</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Site fácil de navegar e encontrar o que preciso.</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Lucas Mendes" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Lucas Mendes <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@lucas_mendes</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Preços justos e entrega no prazo combinado.</blockquote>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Repetição para efeito contínuo -->
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation">
+          <!-- Card 1 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Ricardo Ferreira" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Ricardo Ferreira <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@ricardo_ferreira</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Peças originais e com garantia. Confiança total!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Juliana Rocha" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Juliana Rocha <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@juliana_rocha</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Site fácil de navegar e encontrar o que preciso.</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Lucas Mendes" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Lucas Mendes <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@lucas_mendes</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Preços justos e entrega no prazo combinado.</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 4 - Marquee Vertical (para cima) -->
+      <div class="group flex flex-col overflow-hidden p-2 h-full">
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation animation-reverse">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Patrícia Oliveira" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Patrícia Oliveira <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@patricia_oliveira</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">A Vlopes tem tudo que um motociclista precisa!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Daniel Costa" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Daniel Costa <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@daniel_costa</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Produtos que realmente melhoram a performance da moto.</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Camila Santos" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Camila Santos <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@camila_santos</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Já recomendei para todos os meus amigos motociclistas!</blockquote>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Repetição para efeito contínuo -->
+        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical group-hover:pause-animation animation-reverse">
+          <!-- Card 1 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Patrícia Oliveira" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Patrícia Oliveira <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@patricia_oliveira</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">A Vlopes tem tudo que um motociclista precisa!</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 2 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Daniel Costa" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Daniel Costa <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@daniel_costa</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Produtos que realmente melhoram a performance da moto.</blockquote>
+            </div>
+          </div>
+          
+          <!-- Card 3 (repetido) -->
+          <div class="testimonial-card">
+            <div class="bg-gray-800 rounded-lg p-4 w-48">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full overflow-hidden">
+                  <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Camila Santos" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                  <div class="text-sm font-medium text-white flex items-center gap-1">
+                    Camila Santos <span class="text-xs">🇧🇷 Brasil</span>
+                  </div>
+                  <p class="text-xs font-medium text-gray-400">@camila_santos</p>
+                </div>
+              </div>
+              <blockquote class="mt-3 text-sm text-gray-300">Já recomendei para todos os meus amigos motociclistas!</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Overlays de gradiente -->
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-gray-900"></div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-gray-900"></div>
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gray-900"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-900"></div>
+    </div>
+  </div>
+
+      <div class="mt-8">
+      <a href="https://wa.me/5588996256876" target="_blank"
+        class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg">
+        <i class="fab fa-whatsapp mr-3"></i> Fale com nossos especialistas agora
+      </a>
+    </div>
+</section>
+
+  <script>
+    // JavaScript para pausar a animação ao passar o mouse
+    document.addEventListener('DOMContentLoaded', function() {
+      const marquees = document.querySelectorAll('.group');
+      
+      marquees.forEach(marquee => {
+        marquee.addEventListener('mouseenter', function() {
+          this.querySelectorAll('.animate-marquee-vertical').forEach(el => {
+            el.style.animationPlayState = 'paused';
+          });
+        });
+        
+        marquee.addEventListener('mouseleave', function() {
+          this.querySelectorAll('.animate-marquee-vertical').forEach(el => {
+            el.style.animationPlayState = 'running';
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

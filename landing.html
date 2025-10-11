@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V Lopes Motos | Acessórios e Peças de Alta Performance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #000;
+    }
+
+    /* Fundo com imagem da moto apenas na hero */
+    .hero-section {
+      background-image: url('https://img.freepik.com/fotos-premium/vista-trasera-hombre-montando-motocicleta-carretera-contra-cielo_1048944-9294281.jpg?semt=ais_incoming&w=740&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Canvas de luzes animadas apenas na hero */
+    #beams {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(15px);
+      pointer-events: none;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(50px);
+      background: rgba(0, 0, 0, 0.4);
+      animation: pulse 10s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.05; }
+      50% { opacity: 0.15; }
+    }
+
+    /* Estilos para as seções de produtos - AJUSTADOS */
+    .parallax-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      gap: 2rem;
+      padding: 3rem 1rem;
+    }
+
+    .sticky-image {
+      position: sticky;
+      top: 80px; /* Aumentado para dar mais espaço */
+      height: 70vh; /* Diminuído de 100vh para 70vh */
+      background-size: contain; /* Alterado de cover para contain */
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      background-color: #1a1a1a; /* Fundo para áreas vazias */
+    }
+
+    .overlay-dark {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.30); /* Aumentada a opacidade */
+      transition: opacity 0.5s ease;
+    }
+
+    .overlay-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .content-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 3rem;
+      color: white;
+      min-height: 70vh;
+    }
+
+            .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, -15px); }
+            100% { transform: translate(0, -0px); }
+        }
+
+            .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+                @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+    /* Ajustes para textos menores nas imagens */
+    .overlay-text p:first-child {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .overlay-text p:last-child {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 1024px) {
+      .parallax-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 1rem;
+      }
+      .sticky-image {
+        order: -1;
+        height: 50vh;
+        top: 20px;
+      }
+      .content-block {
+        padding: 1rem;
+        min-height: auto;
+      }
+      .overlay-text p:last-child {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .sticky-image {
+        height: 60vh; /* Um pouco menor em telas muito grandes */
+      }
+    }
+
+            .accordion-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+            opacity: 0;
+        }
+        
+        .accordion-content[data-state="open"] {
+            max-height: 200px;
+            opacity: 1;
+        }
+        
+        .plus-icon {
+            transition: transform 0.3s ease-out;
+        }
+        
+        .accordion-trigger[data-state="open"] .plus-icon {
+            transform: rotate(45deg);
+        }
+        
+        .accordion-trigger {
+            transition: all 0.2s ease-out;
+        }
+  </style>
+</head>
+<body class="text-white bg-black">
+
+<!-- Hero Section com gradiente escuro inferior -->
+<section 
+  class="hero-section relative h-screen flex items-center justify-center text-center text-white overflow-hidden"
+  style="background-image: url('https://i.pinimg.com/originals/b1/2e/dd/b12edd3e7c2b8ecea4d5a1adcbcba2d0.jpg'); background-size: cover; background-position: center;">
+  
+  <!-- Gradiente escuro na parte inferior -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+  <!-- Canvas beams (mantido se quiser o efeito visual) -->
+  <canvas id="beams" class="absolute inset-0 opacity-30"></canvas>
+
+  <!-- Conteúdo principal -->
+  <div class="relative z-10 flex flex-col items-center px-6 md:px-12 max-w-3xl">
+    <!-- Logo -->
+    <img src="assets/images.png" alt="Logo V Lopes Motos Peças" class="w-40 md:w-52 mb-6 drop-shadow-lg rounded-full border-4 border-white/20">
+
+    <!-- Título -->
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-md">
+      Qualidade e confiança <span class="text-yellow-400">sobre duas rodas</span>
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="text-lg md:text-2xl text-gray-200 mt-4 leading-snug">
+      Capacetes, peças, acessórios e serviços — tudo o que sua moto precisa em um só lugar.
+    </p>
+
+    <!-- Chamada -->
+    <p class="text-base md:text-lg text-gray-300 mt-2 italic">
+      “A diferente dos iguais!”
+    </p>
+
+    <!-- Botão WhatsApp -->
+    <div class="mt-8 floating">
+      <a href="https://wa.me/5588996256876" target="_blank"
+        class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow">
+        <i class="fab fa-whatsapp mr-3"></i> Fale com nossos especialistas agora
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Seção de Produtos -->
+  <section id="produtos" class="relative">
+
+        <!-- Seção 1 -->
+<section class="parallax-section px-3">
+  <div class="sticky-image" style="background-image: url('https://www.10wallpaper.com/wallpaper/1600x1200/1307/racer_black_motorcycle_helmet-Sports_HD_Wallpaper_1600x1200.jpg');">
+    <div class="overlay-dark"></div>
+    <div class="overlay-text">
+      <p class="text-xl md:text-2xl mb-2">Capacetes e Acessórios</p>
+      <p class="text-3xl md:text-5xl font-bold">Proteção e estilo para sua moto</p>
+    </div>
+  </div>
+  <div class="content-block">
+    <h2 class="text-3xl font-bold mb-6 text-yellow-500">Segurança com conforto e design</h2>
+    <div>
+      <p class="mb-6 text-lg text-gray-300">
+        Oferecemos capacetes de alta qualidade e acessórios essenciais para motociclistas, garantindo proteção e estilo em cada passeio.
+      </p>
+      <ul class="space-y-3 text-gray-300">
+        <li class="flex items-center">
+          <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+          Capacetes homologados e confortáveis
+        </li>
+        <li class="flex items-center">
+          <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+          Luvas, jaquetas e coletes com proteção
+        </li>
+        <li class="flex items-center">
+          <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+          Óculos e protetores de ouvido para segurança total
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <!-- Seção 2 -->
+    <section class="parallax-section px-3">
+      <div class="sticky-image" style="background-image: url('https://as.sobrenet.pt/s/image/tsr/brandm/content/1920x1280/uasui2lxm0yhoozye3buzyqaou2.jpg');">
+        <div class="overlay-dark"></div>
+        <div class="overlay-text">
+          <p class="text-xl md:text-2xl mb-2">Pneus e Câmaras de Ar</p>
+          <p class="text-3xl md:text-5xl font-bold">Segurança e aderência em cada curva</p>
+        </div>
+      </div>
+      <div class="content-block">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-500">Qualidade que mantém você na pista</h2>
+        <div>
+          <p class="mb-6 text-lg text-gray-300">
+            Trabalhamos com as melhores marcas de pneus e câmaras de ar, garantindo desempenho e segurança em qualquer terreno.
+          </p>
+          <p class="mb-8 text-lg text-gray-300">
+            Aqui você encontra o equilíbrio perfeito entre durabilidade, tração e conforto — do asfalto à trilha.
+          </p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Pneus para todos os tipos de moto
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Marcas premium nacionais e importadas
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Instalação profissional inclusa
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3 -->
+    <section class="parallax-section px-3">
+      <div class="sticky-image" style="background-image: url('https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/480141_460506/Blog/troca_de_oleo_portal.jpg');">
+        <div class="overlay-dark"></div>
+        <div class="overlay-text">
+          <p class="text-xl md:text-2xl mb-2">Óleo + Troca</p>
+          <p class="text-3xl md:text-5xl font-bold">Cuidado completo para seu motor</p>
+        </div>
+      </div>
+      <div class="content-block">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-500">Troca rápida e eficiente</h2>
+        <div>
+          <p class="mb-6 text-lg text-gray-300">
+            Utilizamos óleos lubrificantes de alta performance para garantir a vida útil e o rendimento máximo do seu motor.
+          </p>
+          <p class="mb-8 text-lg text-gray-300">
+            Faça sua troca conosco e sinta a diferença na resposta do acelerador.
+          </p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Óleos sintéticos e mineral
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Filtros originais
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Troca rápida em 30 minutos
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4 -->
+    <section class="parallax-section px-3">
+      <div class="sticky-image" style="background-image: url('https://dor03phawg286.cloudfront.net/Custom/Content/Products/10/31/1031826_kit-relacao-transmissao-rk-honda-titan-160-2016-ate-2023-com-retentor-_m2_637958359382567251.webp');">
+        <div class="overlay-dark"></div>
+        <div class="overlay-text">
+          <p class="text-xl md:text-2xl mb-2">Kits de Transmissão</p>
+          <p class="text-3xl md:text-5xl font-bold">Potência sem perda</p>
+        </div>
+      </div>
+      <div class="content-block">
+        <h2 class="text-3xl font-bold mb-6 text-white">Durabilidade e desempenho</h2>
+        <div>
+          <p class="mb-6 text-lg text-gray-300">
+            Kits de transmissão completos, com corrente, pinhão e coroa das melhores marcas.
+          </p>
+          <p class="mb-8 text-lg text-gray-300">
+            Aproveite o torque máximo da sua moto e evite desgastes prematuros.
+          </p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Correntes importadas de alta resistência
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Pinhão e coroa em aço tratado
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Garantia de 6 meses
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Seção 5 -->
+    <section class="parallax-section px-3">
+      <div class="sticky-image" style="background-image: url('https://img.freepik.com/fotos-premium/tecnico-de-homem-reparando-motocicleta-usando-chave-enquanto-trabalhava-na-oficina-de-reparacao-manutencao-profissional-do-conceito-de-moto-moderno-e-antigo_266732-33607.jpg?semt=ais_hybrid&w=740&q=80');">
+        <div class="overlay-dark"></div>
+        <div class="overlay-text">
+          <p class="text-xl md:text-2xl mb-2">Peças e Revisões</p>
+          <p class="text-3xl md:text-5xl font-bold">Cabos, baterias e motor</p>
+        </div>
+      </div>
+      <div class="content-block">
+        <h2 class="text-3xl font-bold mb-6 text-white">Tudo o que sua moto precisa</h2>
+        <div>
+          <p class="mb-6 text-lg text-gray-300">
+            Revisões com preço especial e peças originais para manter sua moto com o melhor desempenho.
+          </p>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Baterias seladas e convencionais
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Cabos de aceleração e embreagem
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+              Revisão completa com laudo técnico
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section id="contato" class="py-20 px-4 bg-black/80">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Entre em Contato</h2>
+      <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+        Pronto para levar sua moto ao próximo nível? Entre em contato conosco e descubra como podemos ajudar.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-900/50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 text-red-500">Endereço</h3>
+          <p class="text-gray-300">Rua das Motos, 123<br>Bairro Veloz<br>São Paulo - SP</p>
+        </div>
+        
+        <div class="bg-gray-900/50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 text-red-500">Telefone</h3>
+          <p class="text-gray-300">(11) 9999-9999<br>(11) 8888-8888</p>
+        </div>
+        
+        <div class="bg-gray-900/50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 text-red-500">Email</h3>
+          <p class="text-gray-300">contato@voltesmotos.com.br<br>vendas@voltesmotos.com.br</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botão WhatsApp Flutuante -->
+<div class="fixed bottom-6 right-6 z-50">
+  <!-- Efeito de pulso -->
+  <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+  
+  <!-- Botão principal -->
+  <a href="https://wa.me/5588996256876" target="_blank" 
+     class="relative bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110">
+    <i class="fab fa-whatsapp text-white text-2xl"></i>
+  </a>
+</div>
+
+<section class="relative flex min-h-screen flex-col bg-white text-black">
+    <div class="min-h-screen flex items-center justify-center p-6">
+        <div class="w-full max-w-2xl space-y-6">
+            <h2 class="text-xl font-bold text-black text-center">Perguntas Frequentes</h2>
+            <div class="accordion-container h-full w-full rounded-2xl border border-dotted border-gray-300 px-6 bg-white shadow-sm">
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item border-b border-dotted border-gray-300" data-value="1">
+                    <div class="accordion-header">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between w-full py-6 text-left text-[15px] font-semibold leading-6 transition-all hover:bg-gray-50 px-2 rounded-lg" data-state="closed">
+                            <span>Qual o horário de funcionamento?</span>
+                            <div class="plus-icon h-5 w-5 shrink-0 opacity-70" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4V16" stroke="currentColor" stroke-width="2" class="horizontal"/>
+                                    <path d="M4 10H16" stroke="currentColor" stroke-width="2" class="vertical"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="accordion-content text-gray-600 px-2 pb-2" data-state="closed">
+                        <p class="">De segunda a sexta, atendemos das 8h às 18h.</p>
+                        <p class="">Aos sábados, abrimos das 8h às 14h.</p>
+                        <p class="pb-4">Domingos e feriados estamos fechados.</p>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item border-b border-dotted border-gray-300" data-value="2">
+                    <div class="accordion-header">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between w-full py-6 text-left text-[15px] font-semibold leading-6 transition-all hover:bg-gray-50 px-2 rounded-lg" data-state="closed">
+                            <span>Can I Personalize the Components?</span>
+                            <div class="plus-icon h-5 w-5 shrink-0 opacity-70" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4V16" stroke="currentColor" stroke-width="2" class="horizontal"/>
+                                    <path d="M4 10H16" stroke="currentColor" stroke-width="2" class="vertical"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="accordion-content text-gray-600 px-2 pb-2" data-state="closed">
+                        <p class="pb-4">Yes! Easily adjust colors, fonts, layouts, and animations to fit your style.</p>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item border-b border-dotted border-gray-300" data-value="3">
+                    <div class="accordion-header">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between w-full py-6 text-left text-[15px] font-semibold leading-6 transition-all hover:bg-gray-50 px-2 rounded-lg" data-state="open">
+                            <span>Is Designali Built for Speed?</span>
+                            <div class="plus-icon h-5 w-5 shrink-0 opacity-70" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4V16" stroke="currentColor" stroke-width="2" class="horizontal"/>
+                                    <path d="M4 10H16" stroke="currentColor" stroke-width="2" class="vertical"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="accordion-content text-gray-600 px-2 pb-2" data-state="open">
+                        <p class="pb-4">Definitely! Our designs are lightweight, optimized, and load quickly for a smooth experience.</p>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 4 -->
+                <div class="accordion-item" data-value="4">
+                    <div class="accordion-header">
+                        <button class="accordion-trigger flex flex-1 items-center justify-between w-full py-6 text-left text-[15px] font-semibold leading-6 transition-all hover:bg-gray-50 px-2 rounded-lg" data-state="closed">
+                            <span>How Accessible Are the Designs?</span>
+                            <div class="plus-icon h-5 w-5 shrink-0 opacity-70" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4V16" stroke="currentColor" stroke-width="2" class="horizontal"/>
+                                    <path d="M4 10H16" stroke="currentColor" stroke-width="2" class="vertical"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="accordion-content text-gray-600 px-2 pb-2" data-state="closed">
+                        <p class="pb-4">All designs follow best accessibility practices, ensuring easy navigation and screen reader support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<footer class="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center border-t bg-[radial-gradient(35%_128px_at_50%_0%,rgba(255,255,255,0.08),transparent)] px-6 py-10 lg:py-14 mt-8">
+  <div class="bg-gray-400 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur"></div>
+
+  <!-- Container principal -->
+  <div class="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+    
+    <!-- Coluna esquerda -->
+    <div class="text-center md:text-left space-y-3">
+      <i class="fas fa-cube text-3xl text-gray-300"></i>
+      <p class="text-gray-500 text-sm max-w-xs">
+        © <span id="current-year"></span> Marcio Bezerra. Todos os direitos reservados.
+      </p>
+    </div>
+
+    <!-- Coluna direita -->
+    <div class="text-center md:text-right">
+      <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Redes Sociais</h3>
+      <ul class="text-gray-500 mt-3 space-y-2 text-sm max-w-xs">
+        <li>
+          <a href="#" class="hover:text-blue-400 inline-flex items-center justify-center md:justify-end transition-all duration-300">
+            <i class="fab fa-facebook mr-2 text-blue-500"></i> Facebook
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hover:text-red-400 inline-flex items-center justify-center md:justify-end transition-all duration-300">
+            <i class="fab fa-instagram mr-2 text-pink-500"></i> Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script>
+    // Código para as luzes animadas (apenas na hero section)
+    const canvas = document.getElementById("beams");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    class Beam {
+      constructor(width, height) {
+        this.reset(width, height);
+      }
+
+      reset(width, height) {
+        this.x = Math.random() * width * 1.5 - width * 0.25;
+        this.y = Math.random() * height * 1.5 - height * 0.25;
+        this.width = 30 + Math.random() * 60;
+        this.length = height * 2.5;
+        this.angle = -35 + Math.random() * 10;
+        this.speed = 0.6 + Math.random() * 1.2;
+        this.opacity = 0.12 + Math.random() * 0.16;
+        this.hue = 10 + Math.random() * 60; // tons avermelhados
+        this.pulse = Math.random() * Math.PI * 2;
+        this.pulseSpeed = 0.02 + Math.random() * 0.03;
+      }
+
+      draw(ctx) {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.angle * Math.PI) / 180);
+
+        const pulsingOpacity = this.opacity * (0.8 + Math.sin(this.pulse) * 0.2);
+        const gradient = ctx.createLinearGradient(0, 0, 0, this.length);
+
+        gradient.addColorStop(0, `hsla(${this.hue}, 85%, 55%, 0)`);
+        gradient.addColorStop(0.2, `hsla(${this.hue}, 85%, 55%, ${pulsingOpacity * 0.5})`);
+        gradient.addColorStop(0.5, `hsla(${this.hue}, 85%, 55%, ${pulsingOpacity})`);
+        gradient.addColorStop(0.8, `hsla(${this.hue}, 85%, 55%, ${pulsingOpacity * 0.5})`);
+        gradient.addColorStop(1, `hsla(${this.hue}, 85%, 55%, 0)`);
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(-this.width / 2, 0, this.width, this.length);
+        ctx.restore();
+      }
+
+      update(canvasHeight) {
+        this.y -= this.speed;
+        this.pulse += this.pulseSpeed;
+        if (this.y + this.length < -100) {
+          this.y = canvasHeight + 100;
+        }
+      }
+    }
+
+    const beams = Array.from({ length: 30 }, () => new Beam(canvas.width, canvas.height));
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.filter = "blur(35px)";
+
+      beams.forEach((beam) => {
+        beam.update(canvas.height);
+        beam.draw(ctx);
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Código para o efeito parallax
+    const sections = document.querySelectorAll('.parallax-section');
+
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const img = section.querySelector('.sticky-image');
+        const overlayText = section.querySelector('.overlay-text');
+        const rect = section.getBoundingClientRect();
+        const progress = Math.min(Math.max(rect.top / window.innerHeight, 0), 1);
+
+        const scale = 1 - progress * 0.15;
+        img.style.transform = `scale(${scale})`;
+
+        const opacity = 1 - Math.abs(0.5 - progress) * 2;
+        const translateY = (progress - 0.5) * 400;
+        overlayText.style.opacity = opacity;
+        overlayText.style.transform = `translateY(${translateY}px)`;
+      });
+    });
+
+     // Definir o ano atual no rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            
+            // Abrir o terceiro item por padrão
+            const defaultOpenItem = document.querySelector('.accordion-item[data-value="3"]');
+            if (defaultOpenItem) {
+                const content = defaultOpenItem.querySelector('.accordion-content');
+                content.style.maxHeight = '200px';
+                content.style.opacity = '1';
+            }
+            
+            // Adicionar event listeners para todos os itens do accordion
+            accordionItems.forEach(item => {
+                const trigger = item.querySelector('.accordion-trigger');
+                const content = item.querySelector('.accordion-content');
+                
+                trigger.addEventListener('click', function() {
+                    const isOpen = this.getAttribute('data-state') === 'open';
+                    
+                    // Fechar todos os itens
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherTrigger = otherItem.querySelector('.accordion-trigger');
+                            const otherContent = otherItem.querySelector('.accordion-content');
+                            
+                            otherTrigger.setAttribute('data-state', 'closed');
+                            otherContent.setAttribute('data-state', 'closed');
+                            otherContent.style.maxHeight = '0';
+                            otherContent.style.opacity = '0';
+                        }
+                    });
+                    
+                    // Alternar o estado do item clicado
+                    if (isOpen) {
+                        this.setAttribute('data-state', 'closed');
+                        content.setAttribute('data-state', 'closed');
+                        content.style.maxHeight = '0';
+                        content.style.opacity = '0';
+                    } else {
+                        this.setAttribute('data-state', 'open');
+                        content.setAttribute('data-state', 'open');
+                        content.style.maxHeight = '200px';
+                        content.style.opacity = '1';
+                    }
+                });
+            });
+        });
+  </script>
+</body>
+</html>

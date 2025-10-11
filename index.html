@@ -1,569 +1,897 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vlopes Moto - Revisão, Manutenção e Personalização</title>
+  <meta name="description"
+    content="V Lopes Moto Peças - A diferente dos iguais! Peças e Serviços para sua Moto em Itapipoca CE. Qualidade e os melhores preços.">
+  <meta name="keywords"
+    content="peças de moto, acessórios para moto, moto peças, loja de motos, itapipoca, serviços moto">
+  <meta name="author" content="V Lopes Moto Peças">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="V Lopes Moto Peças - A diferente dos iguais!">
+  <meta property="og:description" content="Peças e Serviços para sua Moto - Itapipoca CE">
+
+  <!-- Favicon padrão para navegadores -->
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Favicon PNG para navegadores modernos -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+  <!-- Apple touch icon (iOS) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+  <!-- Manifest para PWA (opcional) -->
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <title>V Lopes Moto Peças - Peças e Serviços para sua Moto | Itapipoca CE</title>
+
+  <link rel="icon" href="/assets/images-removebg-preview.png" type="image/png">
+  <link rel="stylesheet" href="/style/style.css" <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-    
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .slide-in-left {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .slide-in-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    
-    .slide-in-right {
-      opacity: 0;
-      transform: translateX(50px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .slide-in-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    
-    .scale-in {
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .scale-in.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-    
-    .pulse-animation {
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
+
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-red': '#E50914',
+            'brand-yellow': '#FFD60A',
+            'brand-blue': '#0A2540',
+          }
+        }
       }
     }
-    
-    .gradient-bg {
-      background: linear-gradient(135deg, #0A2540 0%, #1a3a5f 100%);
-    }
-    
-    .btn-primary {
-      background: linear-gradient(45deg, #E50914, #ff4757);
-      transition: all 0.3s ease;
-    }
-    
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
-    }
-    
-    .floating {
-      animation: floating 3s ease-in-out infinite;
-    }
-    
-    @keyframes floating {
-      0% { transform: translate(0, 0px); }
-      50% { transform: translate(0, -15px); }
-      100% { transform: translate(0, -0px); }
-    }
-    
-    .service-card {
-      transition: all 0.3s ease;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .testimonial-card {
-      transition: all 0.3s ease;
-    }
-    
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .form-input:focus {
-      box-shadow: 0 0 0 3px rgba(255, 214, 10, 0.3);
-    }
-    
-    .stats-counter {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #E50914;
-    }
-  </style>
+  </script>
 </head>
+
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="fixed w-full gradient-bg text-white shadow-lg z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center">
-        <h1 class="text-2xl font-bold text-[#FFD60A]">Vlopes Moto</h1>
-        <span class="ml-2 text-xs bg-[#E50914] px-2 py-1 rounded-full">Especialistas</span>
+  <nav id="navbar" class="absolute top-0 left-0 w-full py-4 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center">
+          <img src="/assets/images-removebg-preview.png" alt="Logo Vlopes Moto" class="h-14 w-auto object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl md:text-2xl font-bold leading-tight">
+            <span class="text-white stroke-blue font-bold">V</span>
+            <span class="text-brand-blue">Lopes Moto Peças</span>
+          </span>
+          <span class="text-xs text-brand-yellow font-semibold">A diferente dos iguais!</span>
+        </div>
       </div>
-      <nav class="hidden md:flex space-x-6">
-        <a href="#servicos" class="hover:text-[#FFD60A] transition">Serviços</a>
-        <a href="#sobre" class="hover:text-[#FFD60A] transition">Sobre</a>
-        <a href="#depoimentos" class="hover:text-[#FFD60A] transition">Depoimentos</a>
-        <a href="#contato" class="hover:text-[#FFD60A] transition">Contato</a>
-      </nav>
-      <a href="#contato" class="btn-primary px-4 py-2 rounded-lg font-semibold pulse-animation">
-        <i class="fas fa-comment-alt mr-2"></i>Fale Conosco
-      </a>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="h-screen gradient-bg text-white flex items-center justify-center relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 left-10 floating" style="animation-delay: 0s;">
-        <i class="fas fa-cog text-6xl"></i>
-      </div>
-      <div class="absolute top-40 right-20 floating" style="animation-delay: 1s;">
-        <i class="fas fa-tools text-4xl"></i>
-      </div>
-      <div class="absolute bottom-40 left-20 floating" style="animation-delay: 2s;">
-        <i class="fas fa-motorcycle text-5xl"></i>
-      </div>
-    </div>
-    
-    <div class="max-w-7xl mx-auto text-center px-6 z-10">
-      <h2 class="text-4xl md:text-6xl font-extrabold mb-4 fade-in">A sua moto, do <span class="text-[#FFD60A]">seu jeito</span>!</h2>
-      <p class="text-lg md:text-xl mb-8 fade-in" style="transition-delay: 0.2s;">Revisão, manutenção e personalização com qualidade e confiança.</p>
-      
-      <div class="flex flex-col md:flex-row justify-center gap-4 mb-10 fade-in" style="transition-delay: 0.4s;">
-        <a href="#contato" class="btn-primary px-8 py-4 rounded-xl font-bold text-lg">
-          <i class="fas fa-calendar-check mr-2"></i>Peça seu orçamento
-        </a>
-        <a href="#servicos" class="bg-transparent border-2 border-white hover:bg-white hover:text-[#0A2540] px-8 py-4 rounded-xl font-bold text-lg transition">
-          <i class="fas fa-list mr-2"></i>Nossos Serviços
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#inicio" class="text-white hover:text-brand-red transition-colors">Início</a>
+        <a href="#servicos" class="text-white hover:text-brand-red transition-colors">Serviços</a>
+        <a href="#produtos" class="text-white hover:text-brand-red transition-colors">Produtos</a>
+        <a href="#sobre" class="text-white hover:text-brand-red transition-colors">Sobre</a>
+        <a href="#depoimentos" class="text-white hover:text-brand-red transition-colors">Depoimentos</a>
+        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
+          class="bg-brand-red text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all transform hover:scale-105 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          WhatsApp
         </a>
       </div>
-      
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto fade-in" style="transition-delay: 0.6s;">
-        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-          <div class="stats-counter" data-target="500">0</div>
-          <p class="text-sm">Clientes Satisfeitos</p>
-        </div>
-        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-          <div class="stats-counter" data-target="1200">0</div>
-          <p class="text-sm">Serviços Realizados</p>
-        </div>
-        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-          <div class="stats-counter" data-target="98">0</div>
-          <p class="text-sm">% de Satisfação</p>
-        </div>
-        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-          <div class="stats-counter" data-target="5">0</div>
-          <p class="text-sm">Anos de Experiência</p>
-        </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-brand-blue focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t animate-slide-down">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#inicio" class="text-gray-700 hover:text-brand-red transition-colors">Início</a>
+        <a href="#servicos" class="text-gray-700 hover:text-brand-red transition-colors">Serviços</a>
+        <a href="#produtos" class="text-gray-700 hover:text-brand-red transition-colors">Produtos</a>
+        <a href="#sobre" class="text-gray-700 hover:text-brand-red transition-colors">Sobre</a>
+        <a href="#depoimentos" class="text-gray-700 hover:text-brand-red transition-colors">Depoimentos</a>
+        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
+          class="bg-brand-red text-white px-6 py-2 rounded-full text-center hover:bg-red-700 transition-all flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          WhatsApp
+        </a>
       </div>
     </div>
-    
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#servicos" class="text-white text-2xl">
-        <i class="fas fa-chevron-down"></i>
-      </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1558981852-426c6c22a060?auto=format&fit=crop&w=1920&q=80" alt="Motos"
+        class="w-full h-full object-cover">
+      <div class="absolute inset-0 gradient-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-4 z-10 text-center text-white animate-fade-in">
+      <div class="mb-4">
+        <span class="text-brand-yellow text-2xl md:text-3xl font-bold">A diferente dos iguais!</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        Peças e Serviços<br>
+        <span class="text-brand-yellow">para Sua Moto</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+        Estamos esperando por você! Qualidade garantida, preços competitivos e atendimento especializado em Itapipoca
+        CE.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
+          class="bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Fale no WhatsApp
+        </a>
+        <a href="#produtos"
+          class="bg-white/10 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg">
+          Ver Produtos
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
     </div>
   </section>
 
-  <!-- Serviços -->
-  <section id="servicos" class="max-w-7xl mx-auto py-20 px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#0A2540] fade-in">Nossos <span class="text-[#E50914]">Serviços</span></h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">Oferecemos uma gama completa de serviços para manter sua moto em perfeito estado</p>
+  <!-- Benefícios Section -->
+  <section id="beneficios" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+          Por Que Escolher a V Lopes Moto Peças?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          A diferente dos iguais! Oferecemos confiança e tranquilidade.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Benefício 1 -->
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in">
+          <div class="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Qualidade Garantida</h3>
+          <p class="text-gray-600 text-center">
+            Trabalhamos apenas com marcas reconhecidas e oferecemos garantia em todos os produtos.
+          </p>
+        </div>
+
+        <!-- Benefício 2 -->
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in"
+          style="animation-delay: 0.1s;">
+          <div class="w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Preços Competitivos</h3>
+          <p class="text-gray-600 text-center">
+            Os melhores preços do mercado sem comprometer a qualidade dos produtos.
+          </p>
+        </div>
+
+        <!-- Benefício 3 -->
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in"
+          style="animation-delay: 0.2s;">
+          <div class="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Entrega Rápida</h3>
+          <p class="text-gray-600 text-center">
+            Entregamos suas peças rapidamente para você não ficar parado.
+          </p>
+        </div>
+
+        <!-- Benefício 4 -->
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in"
+          style="animation-delay: 0.3s;">
+          <div class="w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Atendimento Especializado</h3>
+          <p class="text-gray-600 text-center">
+            Nossa equipe está pronta para te ajudar a encontrar exatamente o que precisa.
+          </p>
+        </div>
+      </div>
     </div>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#FFD60A] slide-in-left">
-        <div class="text-5xl text-[#FFD60A] mb-6">
-          <i class="fas fa-tools"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-4">Manutenção Preventiva</h3>
-        <p class="text-gray-600 mb-6">Serviços regulares para evitar problemas futuros e garantir o melhor desempenho da sua moto.</p>
-        <ul class="space-y-2 mb-6">
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Troca de óleo e filtros</li>
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ajuste de freios e embreagem</li>
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Verificação de pneus e suspensão</li>
-        </ul>
-        <a href="#contato" class="text-[#E50914] font-semibold flex items-center">
-          Solicitar orçamento <i class="fas fa-arrow-right ml-2"></i>
-        </a>
+  </section>
+
+  <!-- Serviços Section -->
+  <section id="servicos" class="py-20 gradient-overlay">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          Nossos Serviços
+        </h2>
+        <p class="text-xl text-brand-yellow max-w-2xl mx-auto">
+          Soluções completas para sua moto
+        </p>
       </div>
-      
-      <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#E50914] scale-in">
-        <div class="text-5xl text-[#E50914] mb-6">
-          <i class="fas fa-wrench"></i>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-gradient-to-br from-brand-red to-red-700 p-8 rounded-2xl shadow-lg text-white hover:shadow-xl transition-all transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+              </path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Manutenção Preventiva</h3>
+          <p class="text-white/90">
+            Revisão completa para manter sua moto sempre em perfeito estado
+          </p>
         </div>
-        <h3 class="text-xl font-bold mb-4">Reparos Especializados</h3>
-        <p class="text-gray-600 mb-6">Diagnóstico preciso e solução de problemas mecânicos e elétricos com peças de qualidade.</p>
-        <ul class="space-y-2 mb-6">
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Reparo de motor e transmissão</li>
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Sistema elétrico e injeção</li>
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Suspensão e direção</li>
-        </ul>
-        <a href="#contato" class="text-[#E50914] font-semibold flex items-center">
-          Solicitar orçamento <i class="fas fa-arrow-right ml-2"></i>
-        </a>
+
+        <div
+          class="bg-gradient-to-br from-brand-yellow to-yellow-600 p-8 rounded-2xl shadow-lg text-brand-blue hover:shadow-xl transition-all transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Peças Originais</h3>
+          <p class="text-brand-blue/90">
+            Grande estoque de peças originais e genuínas para todas as marcas
+          </p>
+        </div>
+
+        <div
+          class="bg-gradient-to-br from-brand-blue to-blue-900 p-8 rounded-2xl shadow-lg text-white hover:shadow-xl transition-all transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Acessórios</h3>
+          <p class="text-white/90">
+            Personalize sua moto com os melhores acessórios do mercado
+          </p>
+        </div>
       </div>
-      
-      <div class="service-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#0A2540] slide-in-right">
-        <div class="text-5xl text-[#0A2540] mb-6">
-          <i class="fas fa-palette"></i>
+    </div>
+  </section>
+
+  <!-- Produtos/Galeria Section -->
+  <section id="produtos" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+          Nossos Produtos
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Tudo o que sua moto precisa em um só lugar
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Categoria 1 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-brand-red to-red-700 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Motores e Peças</h3>
+            <p class="text-gray-600">Pistões, anéis, kits de motor e muito mais</p>
+          </div>
         </div>
-        <h3 class="text-xl font-bold mb-4">Personalização</h3>
-        <p class="text-gray-600 mb-6">Deixe sua moto com a sua cara! Customizações estéticas e funcionais sob medida.</p>
-        <ul class="space-y-2 mb-6">
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Pintura personalizada</li>
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Acessórios e performance</li>
-          <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Modificações estéticas</li>
-        </ul>
-        <a href="#contato" class="text-[#E50914] font-semibold flex items-center">
-          Solicitar orçamento <i class="fas fa-arrow-right ml-2"></i>
+
+        <!-- Categoria 2 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-brand-yellow to-yellow-600 flex items-center justify-center">
+            <svg class="w-20 h-20 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Sistema Elétrico</h3>
+            <p class="text-gray-600">Baterias, faróis, lanternas e componentes</p>
+          </div>
+        </div>
+
+        <!-- Categoria 3 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-brand-blue to-blue-900 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Suspensão</h3>
+            <p class="text-gray-600">Amortecedores, bengalas e componentes</p>
+          </div>
+        </div>
+
+        <!-- Categoria 4 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Ferramentas</h3>
+            <p class="text-gray-600">Kit completo para manutenção</p>
+          </div>
+        </div>
+
+        <!-- Categoria 5 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Segurança</h3>
+            <p class="text-gray-600">Capacetes, luvas, travas e alarmes</p>
+          </div>
+        </div>
+
+        <!-- Categoria 6 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Customização</h3>
+            <p class="text-gray-600">Adesivos, escapamentos e acessórios</p>
+          </div>
+        </div>
+
+        <!-- Categoria 7 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Pneus</h3>
+            <p class="text-gray-600">Diversas marcas e modelos em estoque</p>
+          </div>
+        </div>
+
+        <!-- Categoria 8 -->
+        <div
+          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
+            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
+              </path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-blue mb-2">Filtros e Óleos</h3>
+            <p class="text-gray-600">Tudo para troca de óleo e manutenção</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos"
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Consulte Disponibilidade
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="bg-gray-100 py-20 px-6">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
-      <div class="relative">
-        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" alt="Moto oficina" class="rounded-xl shadow-lg slide-in-left">
-        <div class="absolute -bottom-6 -right-6 bg-[#E50914] text-white p-6 rounded-xl shadow-lg slide-in-right" style="transition-delay: 0.3s;">
-          <div class="text-3xl font-bold">5+</div>
-          <div class="text-sm">Anos de Experiência</div>
+  <!-- Sobre Section -->
+  <section id="sobre" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-fade-in">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+            alt="Loja V Lopes Moto Peças" class="rounded-2xl shadow-2xl w-full object-cover h-96">
         </div>
-      </div>
-      <div class="slide-in-right">
-        <h3 class="text-3xl font-bold mb-4 text-[#E50914]">Sobre a Vlopes Moto</h3>
-        <p class="mb-6 text-gray-700">Somos apaixonados por motos e especialistas em manter a sua em perfeito estado. Com anos de experiência no mercado, oferecemos serviços de revisão, manutenção e personalização com a qualidade que sua moto merece.</p>
-        
-        <div class="space-y-4 mb-6">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-[#FFD60A] text-xl mr-3 mt-1"></i>
-            <div>
-              <h4 class="font-bold">Equipe Qualificada</h4>
-              <p class="text-gray-600">Mecânicos certificados e experientes em todas as marcas e modelos.</p>
+
+        <div class="animate-fade-in">
+          <span class="text-brand-red text-lg font-bold mb-2 block">A diferente dos iguais!</span>
+          <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-6">
+            Sobre a V Lopes Moto Peças
+          </h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Localizada na Av. José do Patrocínio, 918 em Itapipoca CE, a V Lopes Moto Peças é referência
+            em peças e serviços para motos na região.
+          </p>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Oferecemos um atendimento diferenciado, com uma equipe especializada pronta para te ajudar
+            a encontrar exatamente o que sua moto precisa. Trabalhamos com peças originais e de qualidade,
+            além de realizar serviços de manutenção preventiva e corretiva.
+          </p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed font-semibold text-brand-blue">
+            Estamos esperando por você!
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red mt-1 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <div>
+                <p class="font-semibold text-brand-blue">Endereço:</p>
+                <p class="text-gray-700">Av. José do Patrocínio, 918 - Itapipoca CE</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-red mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              <div>
+                <p class="font-semibold text-brand-blue">WhatsApp:</p>
+                <a href="https://wa.me/5588996256876" class="text-brand-red hover:underline">(88) 99625-6876</a>
+              </div>
             </div>
           </div>
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-[#FFD60A] text-xl mr-3 mt-1"></i>
-            <div>
-              <h4 class="font-bold">Peças Originais</h4>
-              <p class="text-gray-600">Trabalhamos apenas com peças de qualidade e originais.</p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-[#FFD60A] text-xl mr-3 mt-1"></i>
-            <div>
-              <h4 class="font-bold">Garantia de Serviço</h4>
-              <p class="text-gray-600">Oferecemos garantia em todos os serviços realizados.</p>
-            </div>
-          </div>
+
+          <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20loja"
+            target="_blank"
+            class="inline-flex items-center gap-2 mt-8 bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Fale Conosco
+          </a>
         </div>
-        
-        <p class="font-semibold text-lg">Nosso compromisso é com a sua segurança e satisfação.</p>
       </div>
     </div>
   </section>
 
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="max-w-7xl mx-auto py-20 px-6">
-    <div class="text-center mb-16">
-      <h3 class="text-3xl font-bold mb-4 text-[#0A2540] fade-in">O que nossos <span class="text-[#E50914]">clientes</span> dizem</h3>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in">A satisfação dos nossos clientes é a nossa maior recompensa</p>
-    </div>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="testimonial-card bg-white p-6 shadow-lg rounded-xl border-l-4 border-[#FFD60A] fade-in">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-[#0A2540] rounded-full flex items-center justify-center text-white font-bold mr-4">JS</div>
-          <div>
-            <h4 class="font-bold">João Silva</h4>
-            <div class="flex text-[#FFD60A]">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+  <!-- Depoimentos Section -->
+  <section id="depoimentos" class="py-20 bg-brand-blue">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          O Que Nossos Clientes Dizem
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          A confiança de quem já comprou é nossa melhor propaganda
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Depoimento 1 -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center mr-4">
+              <span class="text-brand-blue font-bold text-lg">RC</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-blue">Roberto Costa</h4>
+              <div class="flex text-brand-yellow">
+                ★★★★★
+              </div>
             </div>
           </div>
+          <p class="text-gray-700 italic">
+            "Excelente atendimento! Encontrei todas as peças que precisava para minha moto com preços justos.
+            Super recomendo a V Lopes Moto Peças!"
+          </p>
         </div>
-        <p class="text-gray-600 italic">"Atendimento excelente, recomendo a todos que amam motos! Minha Harley nunca esteve tão bem cuidada."</p>
-      </div>
-      
-      <div class="testimonial-card bg-white p-6 shadow-lg rounded-xl border-l-4 border-[#E50914] fade-in" style="transition-delay: 0.2s;">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-[#0A2540] rounded-full flex items-center justify-center text-white font-bold mr-4">MO</div>
-          <div>
-            <h4 class="font-bold">Maria Oliveira</h4>
-            <div class="flex text-[#FFD60A]">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in" style="animation-delay: 0.1s;">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center mr-4">
+              <span class="text-brand-blue font-bold text-lg">MS</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-blue">Mariana Silva</h4>
+              <div class="flex text-brand-yellow">
+                ★★★★★
+              </div>
             </div>
           </div>
+          <p class="text-gray-700 italic">
+            "Já sou cliente há anos. Qualidade garantida e entrega rápida. A equipe sempre me ajuda
+            a escolher as peças certas!"
+          </p>
         </div>
-        <p class="text-gray-600 italic">"Minha moto nunca esteve tão bem cuidada, serviço rápido e eficiente. Já indiquei para todos os meus amigos!"</p>
-      </div>
-      
-      <div class="testimonial-card bg-white p-6 shadow-lg rounded-xl border-l-4 border-[#0A2540] fade-in" style="transition-delay: 0.4s;">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-[#0A2540] rounded-full flex items-center justify-center text-white font-bold mr-4">CS</div>
-          <div>
-            <h4 class="font-bold">Carlos Santos</h4>
-            <div class="flex text-[#FFD60A]">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center mr-4">
+              <span class="text-brand-blue font-bold text-lg">PA</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-blue">Paulo Andrade</h4>
+              <div class="flex text-brand-yellow">
+                ★★★★★
+              </div>
             </div>
           </div>
+          <p class="text-gray-700 italic">
+            "Melhor loja de peças da região! Preços competitivos, produtos de qualidade e atendimento
+            nota 10. Podem confiar!"
+          </p>
         </div>
-        <p class="text-gray-600 italic">"Profissionais de confiança, voltarei sempre que precisar! Fizeram uma customização incrível na minha moto."</p>
       </div>
-    </div>
-    
-    <div class="text-center mt-12 fade-in" style="transition-delay: 0.6s;">
-      <a href="#contato" class="btn-primary px-6 py-3 rounded-lg font-bold">
-        <i class="fas fa-star mr-2"></i>Seja nosso próximo cliente satisfeito
-      </a>
     </div>
   </section>
 
-  <!-- Formulário -->
-  <section id="contato" class="gradient-bg text-white py-20 px-6">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl font-bold mb-4 fade-in">Peça seu <span class="text-[#FFD60A]">orçamento</span></h3>
-        <p class="text-lg fade-in">Preencha o formulário abaixo e entraremos em contato em até 24h</p>
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-12 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+          Perguntas Frequentes
+        </h2>
+        <p class="text-xl text-gray-600">
+          Tire suas dúvidas sobre nossos produtos e serviços
+        </p>
       </div>
-      
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-        <form class="space-y-6">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <label class="block mb-2 font-medium">Seu nome</label>
-              <input type="text" placeholder="Digite seu nome completo" class="w-full p-4 rounded-lg text-black form-input" required>
-            </div>
-            <div>
-              <label class="block mb-2 font-medium">Seu telefone</label>
-              <input type="tel" placeholder="(00) 00000-0000" class="w-full p-4 rounded-lg text-black form-input" required>
-            </div>
-          </div>
-          
-          <div>
-            <label class="block mb-2 font-medium">Seu e-mail</label>
-            <input type="email" placeholder="seuemail@exemplo.com" class="w-full p-4 rounded-lg text-black form-input" required>
-          </div>
-          
-          <div>
-            <label class="block mb-2 font-medium">Tipo de serviço</label>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input type="checkbox" class="rounded text-[#E50914]">
-                <span>Revisão</span>
-              </label>
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input type="checkbox" class="rounded text-[#E50914]">
-                <span>Manutenção</span>
-              </label>
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input type="checkbox" class="rounded text-[#E50914]">
-                <span>Personalização</span>
-              </label>
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input type="checkbox" class="rounded text-[#E50914]">
-                <span>Outro</span>
-              </label>
-            </div>
-          </div>
-          
-          <div>
-            <label class="block mb-2 font-medium">Descreva o serviço desejado</label>
-            <textarea placeholder="Conte-nos mais detalhes sobre o que você precisa..." rows="4" class="w-full p-4 rounded-lg text-black form-input"></textarea>
-          </div>
-          
-          <button type="submit" class="w-full btn-primary py-4 rounded-lg font-bold text-lg">
-            <i class="fas fa-paper-plane mr-2"></i>Enviar solicitação
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button
+            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+            <span class="font-bold text-brand-blue text-lg">Vocês trabalham com peças originais?</span>
+            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
           </button>
-          
-          <p class="text-center text-sm text-gray-300">Ao enviar este formulário, você concorda com nossa <a href="#" class="text-[#FFD60A] underline">Política de Privacidade</a></p>
-        </form>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8 mt-16 text-center">
-        <div class="fade-in">
-          <div class="text-3xl text-[#FFD60A] mb-4">
-            <i class="fas fa-map-marker-alt"></i>
+          <div class="faq-answer hidden px-6 pb-6">
+            <p class="text-gray-700">
+              Sim! Trabalhamos com peças originais e genuínas de todas as principais marcas do mercado.
+              Todas as peças são garantidas e com procedência comprovada.
+            </p>
           </div>
-          <h4 class="font-bold mb-2">Endereço</h4>
-          <p class="text-gray-300">Rua das Motos, 123<br>Bairro Centro<br>São Paulo - SP</p>
         </div>
-        
-        <div class="fade-in" style="transition-delay: 0.2s;">
-          <div class="text-3xl text-[#FFD60A] mb-4">
-            <i class="fas fa-phone-alt"></i>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button
+            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+            <span class="font-bold text-brand-blue text-lg">Qual o prazo de entrega?</span>
+            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6">
+            <p class="text-gray-700">
+              Para peças em estoque, a entrega é realizada em até 24 horas na região de Itapipoca.
+              Para outras regiões, o prazo varia de acordo com a localização. Entre em contato para mais informações!
+            </p>
           </div>
-          <h4 class="font-bold mb-2">Telefone</h4>
-          <p class="text-gray-300">(11) 99999-9999<br>(11) 3333-3333</p>
         </div>
-        
-        <div class="fade-in" style="transition-delay: 0.4s;">
-          <div class="text-3xl text-[#FFD60A] mb-4">
-            <i class="fas fa-envelope"></i>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button
+            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+            <span class="font-bold text-brand-blue text-lg">Vocês fazem serviços de manutenção?</span>
+            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6">
+            <p class="text-gray-700">
+              Sim! Oferecemos serviços completos de manutenção preventiva e corretiva.
+              Nossa equipe é especializada e trabalha com profissionalismo para garantir o melhor resultado.
+            </p>
           </div>
-          <h4 class="font-bold mb-2">E-mail</h4>
-          <p class="text-gray-300">contato@vlopesmoto.com.br<br>orçamentos@vlopesmoto.com.br</p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button
+            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+            <span class="font-bold text-brand-blue text-lg">Como faço para solicitar um orçamento?</span>
+            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6">
+            <p class="text-gray-700 mb-4">
+              É super fácil! Basta entrar em contato conosco pelo WhatsApp e nossa equipe terá prazer em te atender
+              e fornecer todas as informações que você precisa.
+            </p>
+            <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento" target="_blank"
+              class="inline-flex items-center gap-2 bg-brand-red text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button
+            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+            <span class="font-bold text-brand-blue text-lg">Vocês aceitam cartão de crédito?</span>
+            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6">
+            <p class="text-gray-700">
+              Sim! Aceitamos diversas formas de pagamento incluindo cartão de crédito, débito, PIX e dinheiro.
+              Consulte-nos para mais informações sobre parcelamento.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Localização Section -->
+  <section id="localizacao" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 animate-fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+          Onde Estamos
+        </h2>
+        <p class="text-xl text-gray-600">
+          Visite nossa loja em Itapipoca CE
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="animate-fade-in">
+          <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-lg h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.123456789!2d-39.58!3d-3.50!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMzAnMDAuMCJTIDM5wrAzNCc0OC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="animate-fade-in space-y-6">
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-blue text-xl mb-2">Endereço</h3>
+                <p class="text-gray-700">Av. José do Patrocínio, 918</p>
+                <p class="text-gray-700">Itapipoca - CE</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-brand-blue" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-blue text-xl mb-2">WhatsApp</h3>
+                <a href="https://wa.me/5588996256876" class="text-brand-red hover:underline text-lg">
+                  (88) 99625-6876
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-blue text-xl mb-2">Horário de Funcionamento</h3>
+                <p class="text-gray-700">Segunda a Sexta: 8h às 18h</p>
+                <p class="text-gray-700">Sábado: 8h às 13h</p>
+                <p class="text-gray-700">Domingo: Fechado</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20saber%20mais" target="_blank"
+            class="block w-full text-center bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
+            Fale Conosco pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-20 bg-brand-red text-white">
+    <div class="container mx-auto px-4 text-center animate-fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Estamos Esperando Por Você!
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Entre em contato agora pelo WhatsApp e descubra as melhores soluções para sua moto
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
+          class="bg-white text-brand-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Chamar no WhatsApp
+        </a>
+        <a href="#produtos"
+          class="bg-brand-yellow text-brand-blue px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
+          Ver Produtos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botão WhatsApp fixo -->
+  <a href="https://wa.me/5585987654321" target="_blank" aria-label="Contato via WhatsApp"
+    class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50 w-14 h-14 flex items-center justify-center">
+    <!-- Ícone centralizado do WhatsApp -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-7 h-7">
+      <path
+        d="M16.002 2.002A13.96 13.96 0 0 0 2 16.027c0 2.47.64 4.81 1.86 6.9L2 30l7.29-1.91a13.93 13.93 0 0 0 6.71 1.7h.01c7.73 0 14-6.27 14-14.01A13.96 13.96 0 0 0 16.002 2.002Zm0 25.99h-.01a11.86 11.86 0 0 1-6.04-1.66l-.43-.26-4.32 1.14 1.15-4.21-.28-.44a11.83 11.83 0 0 1-1.83-6.44A11.93 11.93 0 0 1 28 16.028a11.93 11.93 0 0 1-11.998 11.964ZM22.35 19.64c-.38-.19-2.26-1.12-2.61-1.25-.35-.13-.61-.19-.87.19s-1 1.25-1.22 1.5c-.22.25-.45.28-.83.09a9.81 9.81 0 0 1-2.88-1.77 10.79 10.79 0 0 1-2-2.46c-.22-.38 0-.59.16-.78.16-.19.35-.41.52-.63.18-.22.23-.38.35-.63.12-.25.06-.47-.03-.66-.09-.19-.87-2.09-1.19-2.86-.31-.75-.63-.64-.87-.65h-.74c-.25 0-.65.09-.99.47s-1.3 1.27-1.3 3.09 1.33 3.58 1.51 3.83c.19.25 2.62 4 6.34 5.48a15.7 15.7 0 0 0 1.56.46 3.93 3.93 0 0 0 1.83.12c.56-.09 1.73-.71 1.98-1.41s.25-1.28.18-1.41-.34-.22-.72-.41Z" />
+    </svg>
+  </a>
+
 
   <!-- Footer -->
-  <footer class="bg-[#0A2540] text-white py-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
+  <footer class="bg-brand-blue text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 class="text-xl font-bold text-[#FFD60A] mb-4">Vlopes Moto</h3>
-          <p class="text-gray-300">Especialistas em revisão, manutenção e personalização de motos com qualidade e confiança.</p>
-        </div>
-        
-        <div>
-          <h4 class="font-bold mb-4">Serviços</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li><a href="#" class="hover:text-[#FFD60A] transition">Revisão Preventiva</a></li>
-            <li><a href="#" class="hover:text-[#FFD60A] transition">Manutenção Corretiva</a></li>
-            <li><a href="#" class="hover:text-[#FFD60A] transition">Personalização</a></li>
-            <li><a href="#" class="hover:text-[#FFD60A] transition">Pintura</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="font-bold mb-4">Links Rápidos</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li><a href="#servicos" class="hover:text-[#FFD60A] transition">Serviços</a></li>
-            <li><a href="#sobre" class="hover:text-[#FFD60A] transition">Sobre Nós</a></li>
-            <li><a href="#depoimentos" class="hover:text-[#FFD60A] transition">Depoimentos</a></li>
-            <li><a href="#contato" class="hover:text-[#FFD60A] transition">Contato</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 class="font-bold mb-4">Redes Sociais</h4>
-          <div class="flex space-x-4">
-            <a href="#" class="w-10 h-10 bg-[#E50914] rounded-full flex items-center justify-center hover:bg-red-700 transition">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="w-10 h-10 bg-[#E50914] rounded-full flex items-center justify-center hover:bg-red-700 transition">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="w-10 h-10 bg-[#E50914] rounded-full flex items-center justify-center hover:bg-red-700 transition">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="#" class="w-10 h-10 bg-[#E50914] rounded-full flex items-center justify-center hover:bg-red-700 transition">
-              <i class="fab fa-youtube"></i>
-            </a>
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-xl">V</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xl font-bold leading-tight">V Lopes Moto Peças</span>
+              <span class="text-xs text-brand-yellow font-semibold">A diferente dos iguais!</span>
+            </div>
           </div>
+          <p class="text-gray-300">
+            Peças e Serviços para sua Moto com qualidade garantida em Itapipoca CE.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-bold mb-4">Contato</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              <a href="https://wa.me/5588996256876" class="hover:text-brand-yellow transition-colors">
+                (88) 99625-6876
+              </a>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              Av. José do Patrocínio, 918<br>Itapipoca - CE
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-bold mb-4">Horário de Atendimento</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>Segunda a Sexta: 8h - 18h</li>
+            <li>Sábado: 8h - 13h</li>
+            <li>Domingo: Fechado</li>
+          </ul>
         </div>
       </div>
-      
-      <div class="pt-8 border-t border-gray-700 text-center text-gray-400">
-        <p>&copy; 2025 Vlopes Moto. Todos os direitos reservados.</p>
+
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 V Lopes Moto Peças. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Animação de entrada dos elementos
-    document.addEventListener('DOMContentLoaded', function() {
-      const fadeElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      fadeElements.forEach(el => observer.observe(el));
-      
-      // Contador animado
-      const counters = document.querySelectorAll('.stats-counter');
-      const speed = 200;
-      
-      counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          
-          const inc = target / speed;
-          
-          if (count < target) {
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 1);
-          } else {
-            counter.innerText = target;
-          }
-        };
-        
-        updateCount();
-      });
-      
-      // Efeito de mudança na navbar ao scrollar
-      window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 100) {
-          header.classList.add('bg-[#0A2540]/95', 'backdrop-blur-sm');
-        } else {
-          header.classList.remove('bg-[#0A2540]/95', 'backdrop-blur-sm');
-        }
-      });
-    });
-  </script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 </body>
+
 </html>

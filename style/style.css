@@ -1,0 +1,20 @@
+    @keyframes marquee-vertical {
+      from { transform: translateY(0); }
+      to { transform: translateY(calc(-100% - 2rem)); }
+    }
+    
+    .animate-marquee-vertical {
+      animation: marquee-vertical 15s linear infinite;
+    }
+    
+    .group:hover .group-hover\:pause-animation {
+      animation-play-state: paused;
+    }
+    
+    .animation-reverse {
+      animation-direction: reverse;
+    }
+    
+    .testimonial-card {
+      margin-bottom: 1rem; /* Espaço entre os cards */
+    }
