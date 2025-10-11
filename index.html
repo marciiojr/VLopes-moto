@@ -2,896 +2,1178 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="V Lopes Moto Peças - A diferente dos iguais! Peças e Serviços para sua Moto em Itapipoca CE. Qualidade e os melhores preços.">
-  <meta name="keywords"
-    content="peças de moto, acessórios para moto, moto peças, loja de motos, itapipoca, serviços moto">
-  <meta name="author" content="V Lopes Moto Peças">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="V Lopes Moto Peças - A diferente dos iguais!">
-  <meta property="og:description" content="Peças e Serviços para sua Moto - Itapipoca CE">
-
-  <!-- Favicon padrão para navegadores -->
-  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
-
-  <!-- Favicon PNG para navegadores modernos -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-
-  <!-- Apple touch icon (iOS) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-
-  <!-- Manifest para PWA (opcional) -->
-  <link rel="manifest" href="favicon/site.webmanifest">
-
-  <title>V Lopes Moto Peças - Peças e Serviços para sua Moto | Itapipoca CE</title>
-
-  <link rel="icon" href="/assets/images-removebg-preview.png" type="image/png">
-  <link rel="stylesheet" href="/style/style.css" <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Tailwind Config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'brand-red': '#E50914',
-            'brand-yellow': '#FFD60A',
-            'brand-blue': '#0A2540',
-          }
-        }
-      }
-    }
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V Lopes Motos | Acessórios e Peças de Alta Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="text-white bg-black">
 
-  <!-- Navbar -->
-  <nav id="navbar" class="absolute top-0 left-0 w-full py-4 z-50 transition-all duration-300">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-2">
-        <div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center">
-          <img src="/assets/images-removebg-preview.png" alt="Logo Vlopes Moto" class="h-14 w-auto object-contain">
-        </div>
-        <div class="flex flex-col">
-          <span class="text-xl md:text-2xl font-bold leading-tight">
-            <span class="text-white stroke-blue font-bold">V</span>
-            <span class="text-brand-blue">Lopes Moto Peças</span>
-          </span>
-          <span class="text-xs text-brand-yellow font-semibold">A diferente dos iguais!</span>
-        </div>
-      </div>
+    <!-- Hero Section com gradiente escuro inferior -->
+    <section
+        class="hero-section relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="#inicio" class="text-white hover:text-brand-red transition-colors">Início</a>
-        <a href="#servicos" class="text-white hover:text-brand-red transition-colors">Serviços</a>
-        <a href="#produtos" class="text-white hover:text-brand-red transition-colors">Produtos</a>
-        <a href="#sobre" class="text-white hover:text-brand-red transition-colors">Sobre</a>
-        <a href="#depoimentos" class="text-white hover:text-brand-red transition-colors">Depoimentos</a>
-        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
-          class="bg-brand-red text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all transform hover:scale-105 flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          WhatsApp
-        </a>
-      </div>
+        <!-- Gradiente escuro na parte inferior -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-brand-blue focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
+        <!-- Canvas beams (mantido se quiser o efeito visual) -->
+        <canvas id="beams" class="absolute inset-0 opacity-30"></canvas>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t animate-slide-down">
-      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-        <a href="#inicio" class="text-gray-700 hover:text-brand-red transition-colors">Início</a>
-        <a href="#servicos" class="text-gray-700 hover:text-brand-red transition-colors">Serviços</a>
-        <a href="#produtos" class="text-gray-700 hover:text-brand-red transition-colors">Produtos</a>
-        <a href="#sobre" class="text-gray-700 hover:text-brand-red transition-colors">Sobre</a>
-        <a href="#depoimentos" class="text-gray-700 hover:text-brand-red transition-colors">Depoimentos</a>
-        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
-          class="bg-brand-red text-white px-6 py-2 rounded-full text-center hover:bg-red-700 transition-all flex items-center justify-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          WhatsApp
-        </a>
-      </div>
-    </div>
-  </nav>
+        <!-- Conteúdo principal -->
+        <div class="relative z-10 flex flex-col items-center px-4 sm:px-6 md:px-12 max-w-3xl mx-auto">
+            <!-- Logo -->
+            <img src="assets/images.png" alt="Logo V Lopes Motos Peças"
+                class="w-32 sm:w-40 md:w-52 mb-4 sm:mb-6 drop-shadow-lg rounded-full border-4 border-white/20">
 
-  <!-- Hero Section -->
-  <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1558981852-426c6c22a060?auto=format&fit=crop&w=1920&q=80" alt="Motos"
-        class="w-full h-full object-cover">
-      <div class="absolute inset-0 gradient-overlay"></div>
-    </div>
+            <!-- Título -->
+            <h1
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight drop-shadow-md px-2">
+                Qualidade e confiança <span class="text-yellow-400">sobre duas rodas</span>
+            </h1>
 
-    <div class="container mx-auto px-4 z-10 text-center text-white animate-fade-in">
-      <div class="mb-4">
-        <span class="text-brand-yellow text-2xl md:text-3xl font-bold">A diferente dos iguais!</span>
-      </div>
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-        Peças e Serviços<br>
-        <span class="text-brand-yellow">para Sua Moto</span>
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-        Estamos esperando por você! Qualidade garantida, preços competitivos e atendimento especializado em Itapipoca
-        CE.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
-          class="bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Fale no WhatsApp
-        </a>
-        <a href="#produtos"
-          class="bg-white/10 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all transform hover:scale-105 shadow-lg">
-          Ver Produtos
-        </a>
-      </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- Benefícios Section -->
-  <section id="beneficios" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-fade-in">
-        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
-          Por Que Escolher a V Lopes Moto Peças?
-        </h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          A diferente dos iguais! Oferecemos confiança e tranquilidade.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Benefício 1 -->
-        <div
-          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in">
-          <div class="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mb-6 mx-auto">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Qualidade Garantida</h3>
-          <p class="text-gray-600 text-center">
-            Trabalhamos apenas com marcas reconhecidas e oferecemos garantia em todos os produtos.
-          </p>
-        </div>
-
-        <!-- Benefício 2 -->
-        <div
-          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in"
-          style="animation-delay: 0.1s;">
-          <div class="w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center mb-6 mx-auto">
-            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Preços Competitivos</h3>
-          <p class="text-gray-600 text-center">
-            Os melhores preços do mercado sem comprometer a qualidade dos produtos.
-          </p>
-        </div>
-
-        <!-- Benefício 3 -->
-        <div
-          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in"
-          style="animation-delay: 0.2s;">
-          <div class="w-16 h-16 bg-brand-red rounded-full flex items-center justify-center mb-6 mx-auto">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Entrega Rápida</h3>
-          <p class="text-gray-600 text-center">
-            Entregamos suas peças rapidamente para você não ficar parado.
-          </p>
-        </div>
-
-        <!-- Benefício 4 -->
-        <div
-          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 animate-fade-in"
-          style="animation-delay: 0.3s;">
-          <div class="w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center mb-6 mx-auto">
-            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-brand-blue mb-3 text-center">Atendimento Especializado</h3>
-          <p class="text-gray-600 text-center">
-            Nossa equipe está pronta para te ajudar a encontrar exatamente o que precisa.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Serviços Section -->
-  <section id="servicos" class="py-20 gradient-overlay">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-fade-in">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          Nossos Serviços
-        </h2>
-        <p class="text-xl text-brand-yellow max-w-2xl mx-auto">
-          Soluções completas para sua moto
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div
-          class="bg-gradient-to-br from-brand-red to-red-700 p-8 rounded-2xl shadow-lg text-white hover:shadow-xl transition-all transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-              </path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Manutenção Preventiva</h3>
-          <p class="text-white/90">
-            Revisão completa para manter sua moto sempre em perfeito estado
-          </p>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-brand-yellow to-yellow-600 p-8 rounded-2xl shadow-lg text-brand-blue hover:shadow-xl transition-all transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
-              </path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Peças Originais</h3>
-          <p class="text-brand-blue/90">
-            Grande estoque de peças originais e genuínas para todas as marcas
-          </p>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-brand-blue to-blue-900 p-8 rounded-2xl shadow-lg text-white hover:shadow-xl transition-all transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
-              </path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Acessórios</h3>
-          <p class="text-white/90">
-            Personalize sua moto com os melhores acessórios do mercado
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Produtos/Galeria Section -->
-  <section id="produtos" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-fade-in">
-        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
-          Nossos Produtos
-        </h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Tudo o que sua moto precisa em um só lugar
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Categoria 1 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-brand-red to-red-700 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Motores e Peças</h3>
-            <p class="text-gray-600">Pistões, anéis, kits de motor e muito mais</p>
-          </div>
-        </div>
-
-        <!-- Categoria 2 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-brand-yellow to-yellow-600 flex items-center justify-center">
-            <svg class="w-20 h-20 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Sistema Elétrico</h3>
-            <p class="text-gray-600">Baterias, faróis, lanternas e componentes</p>
-          </div>
-        </div>
-
-        <!-- Categoria 3 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-blue-900 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Suspensão</h3>
-            <p class="text-gray-600">Amortecedores, bengalas e componentes</p>
-          </div>
-        </div>
-
-        <!-- Categoria 4 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Ferramentas</h3>
-            <p class="text-gray-600">Kit completo para manutenção</p>
-          </div>
-        </div>
-
-        <!-- Categoria 5 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Segurança</h3>
-            <p class="text-gray-600">Capacetes, luvas, travas e alarmes</p>
-          </div>
-        </div>
-
-        <!-- Categoria 6 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Customização</h3>
-            <p class="text-gray-600">Adesivos, escapamentos e acessórios</p>
-          </div>
-        </div>
-
-        <!-- Categoria 7 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Pneus</h3>
-            <p class="text-gray-600">Diversas marcas e modelos em estoque</p>
-          </div>
-        </div>
-
-        <!-- Categoria 8 -->
-        <div
-          class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
-              </path>
-            </svg>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-brand-blue mb-2">Filtros e Óleos</h3>
-            <p class="text-gray-600">Tudo para troca de óleo e manutenção</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos"
-          target="_blank"
-          class="inline-flex items-center gap-2 bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Consulte Disponibilidade
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sobre Section -->
-  <section id="sobre" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="animate-fade-in">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
-            alt="Loja V Lopes Moto Peças" class="rounded-2xl shadow-2xl w-full object-cover h-96">
-        </div>
-
-        <div class="animate-fade-in">
-          <span class="text-brand-red text-lg font-bold mb-2 block">A diferente dos iguais!</span>
-          <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-6">
-            Sobre a V Lopes Moto Peças
-          </h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            Localizada na Av. José do Patrocínio, 918 em Itapipoca CE, a V Lopes Moto Peças é referência
-            em peças e serviços para motos na região.
-          </p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            Oferecemos um atendimento diferenciado, com uma equipe especializada pronta para te ajudar
-            a encontrar exatamente o que sua moto precisa. Trabalhamos com peças originais e de qualidade,
-            além de realizar serviços de manutenção preventiva e corretiva.
-          </p>
-          <p class="text-lg text-gray-700 mb-8 leading-relaxed font-semibold text-brand-blue">
-            Estamos esperando por você!
-          </p>
-
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-brand-red mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <div>
-                <p class="font-semibold text-brand-blue">Endereço:</p>
-                <p class="text-gray-700">Av. José do Patrocínio, 918 - Itapipoca CE</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-3">
-              <svg class="w-6 h-6 text-brand-red mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              <div>
-                <p class="font-semibold text-brand-blue">WhatsApp:</p>
-                <a href="https://wa.me/5588996256876" class="text-brand-red hover:underline">(88) 99625-6876</a>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20loja"
-            target="_blank"
-            class="inline-flex items-center gap-2 mt-8 bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Fale Conosco
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Depoimentos Section -->
-  <section id="depoimentos" class="py-20 bg-brand-blue">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-fade-in">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          O Que Nossos Clientes Dizem
-        </h2>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-          A confiança de quem já comprou é nossa melhor propaganda
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Depoimento 1 -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center mr-4">
-              <span class="text-brand-blue font-bold text-lg">RC</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-brand-blue">Roberto Costa</h4>
-              <div class="flex text-brand-yellow">
-                ★★★★★
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-700 italic">
-            "Excelente atendimento! Encontrei todas as peças que precisava para minha moto com preços justos.
-            Super recomendo a V Lopes Moto Peças!"
-          </p>
-        </div>
-
-        <!-- Depoimento 2 -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in" style="animation-delay: 0.1s;">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center mr-4">
-              <span class="text-brand-blue font-bold text-lg">MS</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-brand-blue">Mariana Silva</h4>
-              <div class="flex text-brand-yellow">
-                ★★★★★
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-700 italic">
-            "Já sou cliente há anos. Qualidade garantida e entrega rápida. A equipe sempre me ajuda
-            a escolher as peças certas!"
-          </p>
-        </div>
-
-        <!-- Depoimento 3 -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center mr-4">
-              <span class="text-brand-blue font-bold text-lg">PA</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-brand-blue">Paulo Andrade</h4>
-              <div class="flex text-brand-yellow">
-                ★★★★★
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-700 italic">
-            "Melhor loja de peças da região! Preços competitivos, produtos de qualidade e atendimento
-            nota 10. Podem confiar!"
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <div class="text-center mb-12 animate-fade-in">
-        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
-          Perguntas Frequentes
-        </h2>
-        <p class="text-xl text-gray-600">
-          Tire suas dúvidas sobre nossos produtos e serviços
-        </p>
-      </div>
-
-      <div class="space-y-4">
-        <!-- FAQ 1 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <button
-            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
-            <span class="font-bold text-brand-blue text-lg">Vocês trabalham com peças originais?</span>
-            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6">
-            <p class="text-gray-700">
-              Sim! Trabalhamos com peças originais e genuínas de todas as principais marcas do mercado.
-              Todas as peças são garantidas e com procedência comprovada.
+            <!-- Subtítulo -->
+            <p
+                class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 mt-2 sm:mt-4 leading-snug px-2">
+                Capacetes, peças, acessórios e serviços — tudo o que sua moto precisa em um só lugar.
             </p>
-          </div>
-        </div>
 
-        <!-- FAQ 2 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <button
-            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
-            <span class="font-bold text-brand-blue text-lg">Qual o prazo de entrega?</span>
-            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6">
-            <p class="text-gray-700">
-              Para peças em estoque, a entrega é realizada em até 24 horas na região de Itapipoca.
-              Para outras regiões, o prazo varia de acordo com a localização. Entre em contato para mais informações!
+            <!-- Chamada -->
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mt-1 sm:mt-2 italic px-2">
+                "A diferente dos iguais!"
             </p>
-          </div>
-        </div>
 
-        <!-- FAQ 3 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <button
-            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
-            <span class="font-bold text-brand-blue text-lg">Vocês fazem serviços de manutenção?</span>
-            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6">
-            <p class="text-gray-700">
-              Sim! Oferecemos serviços completos de manutenção preventiva e corretiva.
-              Nossa equipe é especializada e trabalha com profissionalismo para garantir o melhor resultado.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <button
-            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
-            <span class="font-bold text-brand-blue text-lg">Como faço para solicitar um orçamento?</span>
-            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6">
-            <p class="text-gray-700 mb-4">
-              É super fácil! Basta entrar em contato conosco pelo WhatsApp e nossa equipe terá prazer em te atender
-              e fornecer todas as informações que você precisa.
-            </p>
-            <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento" target="_blank"
-              class="inline-flex items-center gap-2 bg-brand-red text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition-all">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              Chamar no WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <button
-            class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
-            <span class="font-bold text-brand-blue text-lg">Vocês aceitam cartão de crédito?</span>
-            <svg class="w-6 h-6 text-brand-red transform transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-answer hidden px-6 pb-6">
-            <p class="text-gray-700">
-              Sim! Aceitamos diversas formas de pagamento incluindo cartão de crédito, débito, PIX e dinheiro.
-              Consulte-nos para mais informações sobre parcelamento.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Localização Section -->
-  <section id="localizacao" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12 animate-fade-in">
-        <h2 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
-          Onde Estamos
-        </h2>
-        <p class="text-xl text-gray-600">
-          Visite nossa loja em Itapipoca CE
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <div class="animate-fade-in">
-          <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-lg h-96">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.123456789!2d-39.58!3d-3.50!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMzAnMDAuMCJTIDM5wrAzNCc0OC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1234567890"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="animate-fade-in space-y-6">
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-brand-blue text-xl mb-2">Endereço</h3>
-                <p class="text-gray-700">Av. José do Patrocínio, 918</p>
-                <p class="text-gray-700">Itapipoca - CE</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-brand-blue" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-brand-blue text-xl mb-2">WhatsApp</h3>
-                <a href="https://wa.me/5588996256876" class="text-brand-red hover:underline text-lg">
-                  (88) 99625-6876
+            <!-- Botão WhatsApp - RESPONSIVO -->
+            <div class="mt-6 sm:mt-8 floating w-full max-w-xs sm:max-w-sm md:max-w-md">
+                <a href="https://wa.me/5588996256876" target="_blank"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-medium text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow w-full">
+                    <i class="fab fa-whatsapp mr-2 sm:mr-3"></i> Fale conosco
                 </a>
-              </div>
             </div>
-          </div>
-
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-brand-blue text-xl mb-2">Horário de Funcionamento</h3>
-                <p class="text-gray-700">Segunda a Sexta: 8h às 18h</p>
-                <p class="text-gray-700">Sábado: 8h às 13h</p>
-                <p class="text-gray-700">Domingo: Fechado</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20saber%20mais" target="_blank"
-            class="block w-full text-center bg-brand-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg">
-            Fale Conosco pelo WhatsApp
-          </a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Final -->
-  <section class="py-20 bg-brand-red text-white">
-    <div class="container mx-auto px-4 text-center animate-fade-in">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        Estamos Esperando Por Você!
-      </h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Entre em contato agora pelo WhatsApp e descubra as melhores soluções para sua moto
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="https://wa.me/5588996256876?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento" target="_blank"
-          class="bg-white text-brand-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Chamar no WhatsApp
-        </a>
-        <a href="#produtos"
-          class="bg-brand-yellow text-brand-blue px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg">
-          Ver Produtos
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="relative">
 
-  <!-- Botão WhatsApp fixo -->
-  <a href="https://wa.me/5585987654321" target="_blank" aria-label="Contato via WhatsApp"
-    class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50 w-14 h-14 flex items-center justify-center">
-    <!-- Ícone centralizado do WhatsApp -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-7 h-7">
-      <path
-        d="M16.002 2.002A13.96 13.96 0 0 0 2 16.027c0 2.47.64 4.81 1.86 6.9L2 30l7.29-1.91a13.93 13.93 0 0 0 6.71 1.7h.01c7.73 0 14-6.27 14-14.01A13.96 13.96 0 0 0 16.002 2.002Zm0 25.99h-.01a11.86 11.86 0 0 1-6.04-1.66l-.43-.26-4.32 1.14 1.15-4.21-.28-.44a11.83 11.83 0 0 1-1.83-6.44A11.93 11.93 0 0 1 28 16.028a11.93 11.93 0 0 1-11.998 11.964ZM22.35 19.64c-.38-.19-2.26-1.12-2.61-1.25-.35-.13-.61-.19-.87.19s-1 1.25-1.22 1.5c-.22.25-.45.28-.83.09a9.81 9.81 0 0 1-2.88-1.77 10.79 10.79 0 0 1-2-2.46c-.22-.38 0-.59.16-.78.16-.19.35-.41.52-.63.18-.22.23-.38.35-.63.12-.25.06-.47-.03-.66-.09-.19-.87-2.09-1.19-2.86-.31-.75-.63-.64-.87-.65h-.74c-.25 0-.65.09-.99.47s-1.3 1.27-1.3 3.09 1.33 3.58 1.51 3.83c.19.25 2.62 4 6.34 5.48a15.7 15.7 0 0 0 1.56.46 3.93 3.93 0 0 0 1.83.12c.56-.09 1.73-.71 1.98-1.41s.25-1.28.18-1.41-.34-.22-.72-.41Z" />
-    </svg>
-  </a>
-
-
-  <!-- Footer -->
-  <footer class="bg-brand-blue text-white py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <div class="flex items-center space-x-2 mb-4">
-            <div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center">
-              <span class="text-white font-bold text-xl">V</span>
-            </div>
-            <div class="flex flex-col">
-              <span class="text-xl font-bold leading-tight">V Lopes Moto Peças</span>
-              <span class="text-xs text-brand-yellow font-semibold">A diferente dos iguais!</span>
-            </div>
-          </div>
-          <p class="text-gray-300">
-            Peças e Serviços para sua Moto com qualidade garantida em Itapipoca CE.
-          </p>
+        <div class="text-center py-16 px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg">
+                ALGUNS DOS NOSSOS <span class="text-yellow-500">PRODUTOS</span>
+            </h1>
+            <p class="text-gray-400 text-lg mt-3">
+                Qualidade, durabilidade e segurança em cada peça.
+            </p>
         </div>
 
-        <div>
-          <h4 class="text-xl font-bold mb-4">Contato</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              <a href="https://wa.me/5588996256876" class="hover:text-brand-yellow transition-colors">
-                (88) 99625-6876
-              </a>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-5 h-5 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              Av. José do Patrocínio, 918<br>Itapipoca - CE
-            </li>
-          </ul>
+        <!-- Seção 1 -->
+        <section class="parallax-section px-3">
+            <div class="sticky-image"
+                style="background-image: url('https://www.10wallpaper.com/wallpaper/1600x1200/1307/racer_black_motorcycle_helmet-Sports_HD_Wallpaper_1600x1200.jpg');">
+                <div class="overlay-dark"></div>
+                <div class="overlay-text">
+                    <p class="text-xl md:text-2xl mb-2">Capacetes e Acessórios</p>
+                    <p class="text-3xl md:text-5xl font-bold">Proteção e estilo para sua moto</p>
+                </div>
+            </div>
+            <div class="content-block">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Segurança com conforto e design</h2>
+                <div>
+                    <p class="mb-6 text-lg text-gray-300">
+                        Oferecemos <span class="text-blue-700 font-semibold">capacetes</span> de alta qualidade e
+                        acessórios essenciais para motociclistas, garantindo proteção e estilo em cada passeio.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Capacetes homologados e confortáveis
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Luvas, jaquetas e coletes com proteção
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Óculos e protetores de ouvido para segurança total
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2 -->
+        <section class="parallax-section px-3">
+            <div class="sticky-image"
+                style="background-image: url('https://as.sobrenet.pt/s/image/tsr/brandm/content/1920x1280/uasui2lxm0yhoozye3buzyqaou2.jpg');">
+                <div class="overlay-dark"></div>
+                <div class="overlay-text">
+                    <p class="text-xl md:text-2xl mb-2">Pneus e Câmaras de Ar</p>
+                    <p class="text-3xl md:text-5xl font-bold">Segurança e aderência em cada curva</p>
+                </div>
+            </div>
+            <div class="content-block">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Qualidade que mantém você na pista</h2>
+                <div>
+                    <p class="mb-6 text-lg text-gray-300">
+                        Trabalhamos com as melhores marcas de pneus e câmaras de ar, garantindo desempenho e segurança
+                        em qualquer terreno.
+                    </p>
+                    <p class="mb-8 text-lg text-gray-300">
+                        Aqui você encontra o equilíbrio perfeito entre durabilidade, tração e conforto — do asfalto à
+                        trilha.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Pneus para todos os tipos de moto
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Marcas premium nacionais e importadas
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Instalação profissional inclusa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section class="parallax-section px-3">
+            <div class="sticky-image"
+                style="background-image: url('https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/480141_460506/Blog/troca_de_oleo_portal.jpg');">
+                <div class="overlay-dark"></div>
+                <div class="overlay-text">
+                    <p class="text-xl md:text-2xl mb-2">Óleo + Troca</p>
+                    <p class="text-3xl md:text-5xl font-bold">Cuidado completo para seu motor</p>
+                </div>
+            </div>
+            <div class="content-block">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Troca rápida e eficiente</h2>
+                <div>
+                    <p class="mb-6 text-lg text-gray-300">
+                        Utilizamos óleos lubrificantes de alta performance para garantir a vida útil e o rendimento
+                        máximo do seu motor.
+                    </p>
+                    <p class="mb-8 text-lg text-gray-300">
+                        Faça sua troca conosco e sinta a diferença na resposta do acelerador.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Óleos sintéticos e mineral
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Filtros originais
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Troca rápida em 30 minutos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4 -->
+        <section class="parallax-section px-3">
+            <div class="sticky-image"
+                style="background-image: url('https://blog.fremax.com/wp-content/uploads/2023/02/post_thumbnail-36d121f698ab42339f53a9e02c9df619.jpeg');">
+                <div class="overlay-dark"></div>
+                <div class="overlay-text">
+                    <p class="text-xl md:text-2xl mb-2">Kits de Transmissão</p>
+                    <p class="text-3xl md:text-5xl font-bold">Potência sem perda</p>
+                </div>
+            </div>
+            <div class="content-block">
+                <h2 class="text-3xl font-bold mb-6 text-white">Durabilidade e desempenho</h2>
+                <div>
+                    <p class="mb-6 text-lg text-gray-300">
+                        Kits de transmissão completos, com corrente, pinhão e coroa das melhores marcas.
+                    </p>
+                    <p class="mb-8 text-lg text-gray-300">
+                        Aproveite o torque máximo da sua moto e evite desgastes prematuros.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Correntes importadas de alta resistência
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Pinhão e coroa em aço tratado
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Garantia de 6 meses
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção 5 -->
+        <section class="parallax-section px-3">
+            <div class="sticky-image"
+                style="background-image: url('https://img.freepik.com/fotos-premium/tecnico-de-homem-reparando-motocicleta-usando-chave-enquanto-trabalhava-na-oficina-de-reparacao-manutencao-profissional-do-conceito-de-moto-moderno-e-antigo_266732-33607.jpg?semt=ais_hybrid&w=740&q=80');">
+                <div class="overlay-dark"></div>
+                <div class="overlay-text">
+                    <p class="text-xl md:text-2xl mb-2">Peças e Revisões</p>
+                    <p class="text-3xl md:text-5xl font-bold">Cabos, baterias e motor</p>
+                </div>
+            </div>
+            <div class="content-block">
+                <h2 class="text-3xl font-bold mb-6 text-white">Tudo o que sua moto precisa</h2>
+                <div>
+                    <p class="mb-6 text-lg text-gray-300">
+                        Revisões com preço especial e peças originais para manter sua moto com o melhor desempenho.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Baterias seladas e convencionais
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Cabos de aceleração e embreagem
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                            Revisão completa com laudo técnico
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <div class="bg-white">
+        <section id="sobre"
+            class="w-full bg-[#fff] py-20 px-6 flex flex-col md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto">
+
+            <!-- Imagem / Logo -->
+            <div class="flex-1 flex justify-center">
+                <img src="assets/images.png" alt="Logo V Lopes Motos Peças"
+                    class="w-32 sm:w-40 md:w-52 mb-4 sm:mb-6 drop-shadow-lg rounded-full border-4 border-white/20 floating">
+            </div>
+
+            <!-- Texto -->
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-4xl font-extrabold mb-6 text-black drop-shadow-lg">
+                    Sobre a <span class="text-yellow-400">V Lopes Moto Peças</span>
+                </h2>
+                <p class="text-black text-lg leading-relaxed mb-4">
+                    Com anos de experiência no mercado, a <strong>V Lopes Moto Peças</strong> se tornou referência em
+                    qualidade, confiança e atendimento.
+                    Trabalhamos com as melhores marcas e garantimos que cada peça e acessório ofereça o desempenho e a
+                    segurança que sua moto merece.
+                </p>
+                <p class="text-black text-base leading-relaxed">
+                    Nosso compromisso é manter você em movimento, oferecendo soluções completas — de peças e acessórios
+                    a serviços especializados —
+                    sempre com o cuidado e dedicação que só quem entende de moto pode oferecer.
+                </p>
+
+                <div class="mt-8">
+                    <a href="https://wa.me/5588996256876" target="_blank"
+                        class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow">
+                        <i class="fab fa-whatsapp mr-3"></i> Fale com nossos especialistas agora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-white text-gray-800 py-16 px-4 flex flex-col items-center justify-center min-h-screen">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+                O QUE <span class="text-yellow-500">NOSSOS CLIENTES</span> DIZEM SOBRE NÓS?
+            </h2>
+
+            <!-- Container 3D com depoimentos -->
+            <div class="border border-gray-300 rounded-lg relative flex h-96 w-full max-w-[800px] flex-row items-center justify-center overflow-hidden gap-1.5"
+                style="perspective: 300px;">
+                <div class="flex flex-row items-center gap-4"
+                    style="transform: translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg);">
+                    <!-- Coluna 1 - Marquee Vertical (para baixo) -->
+                    <div class="group flex flex-col overflow-hidden p-2 h-full">
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical">
+                            <!-- Card 1 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Carlos Silva
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Os acessórios da Vlopes transformaram
+                                        minha moto completamente!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Ana Santos
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Qualidade excepcional e entrega
+                                        rápida. Recomendo!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/51.jpg"
+                                                alt="Roberto Alves" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Roberto Alves
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Melhor custo-benefício do mercado de
+                                        peças para motos.</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repetição para efeito contínuo -->
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical">
+                            <!-- Card 1 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Carlos Silva
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Os acessórios da Vlopes transformaram
+                                        minha moto completamente!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Santos"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Ana Santos
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Qualidade excepcional e entrega
+                                        rápida. Recomendo!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/51.jpg"
+                                                alt="Roberto Alves" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Roberto Alves
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Melhor custo-benefício do mercado de
+                                        peças para motos.</blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 2 - Marquee Vertical (para cima) -->
+                    <div class="group flex flex-col overflow-hidden p-2 h-full">
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical animation-reverse">
+                            <!-- Card 1 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/53.jpg"
+                                                alt="Mariana Costa" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Mariana Costa
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Atendimento excelente e produtos de
+                                        alta qualidade!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Pedro Lima"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Pedro Lima
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Encontrei peças que não achava em
+                                        lugar nenhum. Vlopes é top!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/22.jpg"
+                                                alt="Fernando Souza" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Fernando Souza
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Produtos duráveis e com ótimo
+                                        acabamento. Nota 10!</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repetição para efeito contínuo -->
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical animation-reverse">
+                            <!-- Card 1 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/53.jpg"
+                                                alt="Mariana Costa" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Mariana Costa
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Atendimento excelente e produtos de
+                                        alta qualidade!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Pedro Lima"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Pedro Lima
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Encontrei peças que não achava em
+                                        lugar nenhum. Vlopes é top!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/22.jpg"
+                                                alt="Fernando Souza" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Fernando Souza
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Produtos duráveis e com ótimo
+                                        acabamento. Nota 10!</blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 3 - Marquee Vertical (para baixo) -->
+                    <div class="group flex flex-col overflow-hidden p-2 h-full">
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical">
+                            <!-- Card 1 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/85.jpg"
+                                                alt="Ricardo Ferreira" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Ricardo Ferreira
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Peças originais e com garantia.
+                                        Confiança total!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
+                                                alt="Juliana Rocha" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Juliana Rocha
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Site fácil de navegar e encontrar o
+                                        que preciso.</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Lucas Mendes"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Lucas Mendes
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Preços justos e entrega no prazo
+                                        combinado.</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repetição para efeito contínuo -->
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical">
+                            <!-- Card 1 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/85.jpg"
+                                                alt="Ricardo Ferreira" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Ricardo Ferreira
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Peças originais e com garantia.
+                                        Confiança total!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
+                                                alt="Juliana Rocha" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Juliana Rocha
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Site fácil de navegar e encontrar o
+                                        que preciso.</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Lucas Mendes"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Lucas Mendes
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Preços justos e entrega no prazo
+                                        combinado.</blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 4 - Marquee Vertical (para cima) -->
+                    <div class="group flex flex-col overflow-hidden p-2 h-full">
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical animation-reverse">
+                            <!-- Card 1 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/32.jpg"
+                                                alt="Patrícia Oliveira" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Patrícia Oliveira
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">A Vlopes tem tudo que um motociclista
+                                        precisa!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Daniel Costa"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Daniel Costa
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Produtos que realmente melhoram a
+                                        performance da moto.</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/28.jpg"
+                                                alt="Camila Santos" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Camila Santos
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Já recomendei para todos os meus
+                                        amigos motociclistas!</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repetição para efeito contínuo -->
+                        <div class="flex flex-col shrink-0 justify-around animate-marquee-vertical animation-reverse">
+                            <!-- Card 1 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/32.jpg"
+                                                alt="Patrícia Oliveira" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Patrícia Oliveira
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">A Vlopes tem tudo que um motociclista
+                                        precisa!</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Daniel Costa"
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Daniel Costa
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Produtos que realmente melhoram a
+                                        performance da moto.</blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 (repetido) -->
+                            <div class="testimonial-card">
+                                <div class="bg-gray-50 rounded-lg p-4 w-48 shadow-sm">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-9 h-9 rounded-full overflow-hidden">
+                                            <img src="https://randomuser.me/api/portraits/women/28.jpg"
+                                                alt="Camila Santos" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="text-sm font-medium text-gray-800 flex items-center gap-1">
+                                                Camila Santos
+                                            </div>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <span class="text-xs font-medium text-gray-500 ml-1">4.5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <blockquote class="mt-3 text-sm text-gray-600">Já recomendei para todos os meus
+                                        amigos motociclistas!</blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Overlays de gradiente -->
+                    <div class="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-white"></div>
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-white">
+                    </div>
+                    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <a href="https://wa.me/5588996256876" target="_blank"
+                    class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg">
+                    <i class="fab fa-whatsapp mr-3"></i> Fale com nossos especialistas agora
+                </a>
+            </div>
+        </section>
+
+
+        <!-- Botão WhatsApp Flutuante -->
+        <div class="fixed bottom-6 right-6 z-50">
+            <!-- Efeito de pulso -->
+            <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+
+            <!-- Botão principal -->
+            <a href="https://wa.me/5588996256876" target="_blank"
+                class="relative bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110">
+                <i class="fab fa-whatsapp text-white text-2xl"></i>
+            </a>
         </div>
 
-        <div>
-          <h4 class="text-xl font-bold mb-4">Horário de Atendimento</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li>Segunda a Sexta: 8h - 18h</li>
-            <li>Sábado: 8h - 13h</li>
-            <li>Domingo: Fechado</li>
-          </ul>
-        </div>
-      </div>
+        <section class="relative flex min-h-screen flex-col bg-white text-black">
+            <div class="flex items-center justify-center p-6">
+                <div class="w-full max-w-2xl space-y-6">
+                    <h2 class="text-xl font-bold text-black text-center">Perguntas Frequentes</h2>
+                    <div
+                        class="accordion-container h-full w-full rounded-2xl border border-dotted border-gray-300 px-6 bg-white shadow-sm">
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item border-b border-dotted border-gray-300" data-value="1">
+                            <div class="accordion-header">
+                                <button
+                                    class="accordion-trigger flex flex-1 items-center justify-between w-full py-6 text-left text-[15px] font-semibold leading-6 transition-all hover:bg-gray-50 px-2 rounded-lg"
+                                    data-state="closed">
+                                    <span>Qual o horário de funcionamento?</span>
+                                    <div class="plus-icon h-5 w-5 shrink-0 opacity-70" aria-hidden="true">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 4V16" stroke="currentColor" stroke-width="2"
+                                                class="horizontal" />
+                                            <path d="M4 10H16" stroke="currentColor" stroke-width="2"
+                                                class="vertical" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="accordion-content text-gray-600 px-2 pb-2" data-state="closed">
+                                <p class="">De segunda a sexta, atendemos das 8h às 18h.</p>
+                                <p class="">Aos sábados, abrimos das 8h às 14h.</p>
+                                <p class="pb-4">Domingos e feriados estamos fechados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-        <p>&copy; 2025 V Lopes Moto Peças. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
+            <!-- Seção de Localização -->
+            <section class="bg-white py-20 px-6">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-gray-900">
+                        <span class="text-yellow-500">Nossa Localização</span>
+                    </h2>
 
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+
+                        <!-- Lado Esquerdo - Informações -->
+                        <div class="w-full lg:w-2/5 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">VENHA NOS VISITAR E SOLICITE, SEM
+                                    CUSTO, UM ORÇAMENTO PERSONALIZADO PARA SUA MOTO!</h3>
+                                <p class="text-gray-700">Atendemos com agilidade, peças de qualidade e o melhor preço da
+                                    região.</p>
+                            </div>
+
+                            <div class="mt-8">
+                                <a href="https://wa.me/5588996256876" target="_blank"
+                                    class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow">
+                                    <i class="fab fa-whatsapp mr-3"></i> Fale com nossos especialistas agora
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Lado Direito - Mapa -->
+                        <div
+                            class="w-full lg:w-3/5 h-[350px] rounded-2xl overflow-hidden shadow-xl border border-gray-300">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.276316716694!2d-39.5838099250186!3d-3.496064743522263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7fe7a8a2f7c8a1d%3A0x3b6c6e9a4a4a4a4a!2sAv.%20Jos%C3%A9%20do%20Patroc%C3%ADnio%2C%20918%20-%20Itapipoca%2C%20CE%2C%2062500-000!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr"
+                                width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer
+                class="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center border-t bg-[radial-gradient(35%_128px_at_50%_0%,rgba(255,255,255,0.08),transparent)] px-6 py-10 lg:py-14 mt-8">
+                <div
+                    class="bg-gray-400 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur">
+                </div>
+
+                <!-- Container principal -->
+                <div class="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+
+                    <!-- Coluna esquerda -->
+                    <div class="text-center md:text-left space-y-3">
+                        <i class="fas fa-cube text-3xl text-gray-300"></i>
+                        <p class="text-gray-500 text-sm max-w-xs">
+                            © <span id="current-year"></span> Marcio Bezerra. Todos os direitos reservados.
+                        </p>
+                    </div>
+
+                    <!-- Coluna direita -->
+                    <div class="text-center md:text-right">
+                        <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Redes Sociais</h3>
+                        <ul class="text-gray-500 mt-3 space-y-2 text-sm max-w-xs">
+                            <li>
+                                <a href="#"
+                                    class="hover:text-blue-400 inline-flex items-center justify-center md:justify-end transition-all duration-300">
+                                    <i class="fab fa-facebook mr-2 text-blue-500"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="hover:text-red-400 inline-flex items-center justify-center md:justify-end transition-all duration-300">
+                                    <i class="fab fa-instagram mr-2 text-pink-500"></i> Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <script src="js/dataAtual.js"></script>
+            <script src="js/beamsHero.js"></script>
+            <script src="/js/accordion.js"></script>
+            <script src="/js/animacaoTestemunhas.js"></script>
 </body>
 
 </html>

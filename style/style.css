@@ -1,20 +1,256 @@
-    @keyframes marquee-vertical {
-      from { transform: translateY(0); }
-      to { transform: translateY(calc(-100% - 2rem)); }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+
+/* Hero section responsiva */
+.hero-section {
+    background-image: url('https://i.pinimg.com/originals/b1/2e/dd/b12edd3e7c2b8ecea4d5a1adcbcba2d0.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Canvas de luzes animadas apenas na hero */
+#beams {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(50px);
+    background: rgba(0, 0, 0, 0.4);
+    animation: pulse 10s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.05;
     }
-    
-    .animate-marquee-vertical {
-      animation: marquee-vertical 15s linear infinite;
+
+    50% {
+        opacity: 0.15;
     }
-    
-    .group:hover .group-hover\:pause-animation {
-      animation-play-state: paused;
+}
+
+/* Estilos para as seções de produtos - AJUSTADOS */
+.parallax-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    gap: 2rem;
+    padding: 3rem 1rem;
+}
+
+.sticky-image {
+    position: sticky;
+    top: 80px;
+    /* Aumentado para dar mais espaço */
+    height: 70vh;
+    /* Diminuído de 100vh para 70vh */
+    background-size: contain;
+    /* Alterado de cover para contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    /* Fundo para áreas vazias */
+}
+
+.overlay-dark {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    /* Aumentada a opacidade */
+    transition: opacity 0.5s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 3rem;
+    color: white;
+    min-height: 70vh;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
     }
-    
-    .animation-reverse {
-      animation-direction: reverse;
+
+    50% {
+        transform: translate(0, -15px);
     }
-    
-    .testimonial-card {
-      margin-bottom: 1rem; /* Espaço entre os cards */
+
+    100% {
+        transform: translate(0, -0px);
     }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+/* Ajustes para textos menores nas imagens */
+.overlay-text p:first-child {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-text p:last-child {
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+@media (max-width: 1024px) {
+    .parallax-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .sticky-image {
+        order: -1;
+        height: 50vh;
+        top: 20px;
+    }
+
+    .content-block {
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .overlay-text p:last-child {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .sticky-image {
+        height: 60vh;
+        /* Um pouco menor em telas muito grandes */
+    }
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+.accordion-content[data-state="open"] {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.plus-icon {
+    transition: transform 0.3s ease-out;
+}
+
+.accordion-trigger[data-state="open"] .plus-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-trigger {
+    transition: all 0.2s ease-out;
+}
+
+@keyframes marquee-vertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.animate-marquee-vertical {
+    animation: marquee-vertical 20s linear infinite;
+}
+
+.animation-reverse {
+    animation-direction: reverse;
+}
+
+.group:hover .animate-marquee-vertical {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para a seção de localização */
+.location-section {
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.location-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid #f59e0b;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

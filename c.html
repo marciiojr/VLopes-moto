@@ -1,164 +1,101 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlopes Motos - Peças e Serviços</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .bg-custom-gradient {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        }
-        
-        .text-vlopes-orange {
-            color: #f97316;
-        }
-        
-        .border-vlopes-orange {
-            border-color: #f97316;
-        }
-        
-        .bg-vlopes-orange {
-            background-color: #f97316;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vlopes Motos | Acessórios e Peças de Alta Performance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+  <style>
+    @keyframes marquee-vertical {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+    
+    .animate-marquee-vertical {
+      animation: marquee-vertical 20s linear infinite;
+    }
+    
+    .animation-reverse {
+      animation-direction: reverse;
+    }
+    
+    .group:hover .animate-marquee-vertical {
+      animation-play-state: paused;
+    }
+    
+    .testimonial-card {
+      margin-bottom: 1rem;
+    }
+    
+    /* Estilos para a seção de localização */
+    .location-section {
+      background-color: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .location-card {
+      transition: all 0.3s ease;
+      border-left: 4px solid #f59e0b;
+    }
+    
+    .location-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  </style>
 </head>
-<body class="bg-gray-900">
-    <div class="bg-gray-900 py-24 sm:py-32">
-        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-center text-base/7 font-semibold text-vlopes-orange">Vlopes Moto Peças</h2>
-            <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Tudo que sua moto precisa em um só lugar</p>
-            
-            <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-                <!-- Card 1: Peças Originais -->
-                <div class="relative lg:row-span-2">
-                    <div class="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl"></div>
-                    <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-                        <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Peças Originais</p>
-                            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Oferecemos peças originais e com procedência garantida para sua moto. Marcas confiáveis e duráveis com garantia de fábrica.</p>
-                        </div>
-                        <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                            <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
-                                <div class="size-full flex items-center justify-center">
-                                    <i class="fas fa-cogs text-6xl text-vlopes-orange"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl"></div>
-                </div>
-                
-                <!-- Card 2: Pneus -->
-                <div class="relative max-lg:row-start-1">
-                    <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl"></div>
-                    <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-                        <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-                            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Pneus</p>
-                            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Pneus com preço promocional e qualidade garantida. Segurança e durabilidade para suas viagens.</p>
-                        </div>
-                        <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-                            <div class="w-full max-lg:max-w-xs flex justify-center">
-                                <i class="fas fa-tire text-6xl text-vlopes-orange"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-t-4xl"></div>
-                </div>
-                
-                <!-- Card 3: Transmissão -->
-                <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-                    <div class="absolute inset-px rounded-lg bg-gray-800"></div>
-                    <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-                        <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-                            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Kit Transmissão</p>
-                            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Kit transmissão completo com as melhores marcas do mercado. Garantia de qualidade e durabilidade.</p>
-                        </div>
-                        <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-                            <div class="w-full flex justify-center">
-                                <i class="fas fa-cog text-5xl text-vlopes-orange"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15"></div>
-                </div>
-                
-                <!-- Card 4: Serviços -->
-                <div class="relative lg:row-span-2">
-                    <div class="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
-                    <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-                        <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                            <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Serviços Especializados</p>
-                            <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Além de peças, oferecemos serviços especializados: troca de óleo, instalação de baterias e muito mais.</p>
-                        </div>
-                        <div class="relative min-h-120 w-full grow">
-                            <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10">
-                                <div class="flex bg-gray-900 outline outline-white/5">
-                                    <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
-                                        <div class="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">Troca de Óleo</div>
-                                        <div class="border-r border-gray-600/10 px-4 py-2">Instalação</div>
-                                    </div>
-                                </div>
-                                <div class="px-6 pt-6 pb-14 flex flex-col gap-4">
-                                    <div class="flex items-center gap-3">
-                                        <i class="fas fa-oil-can text-vlopes-orange"></i>
-                                        <span class="text-white text-sm">Troca de óleo com produto de qualidade</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <i class="fas fa-battery-full text-vlopes-orange"></i>
-                                        <span class="text-white text-sm">Instalação de baterias na hora</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <i class="fas fa-tools text-vlopes-orange"></i>
-                                        <span class="text-white text-sm">Serviços em nossa oficina</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
-                </div>
-            </div>
-            
-            <!-- CTA Section -->
-            <div class="mt-16 text-center">
-                <h3 class="text-2xl font-bold text-white">Precisa de peças para sua moto?</h3>
-                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Temos as principais peças para sua moto com preço justo, pronta entrega e marcas de confiança.</p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-vlopes-orange text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors">
-                        <i class="fas fa-whatsapp mr-2"></i> Fale Conosco
-                    </button>
-                    <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium border border-gray-700 hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-phone mr-2"></i> Ligue Agora
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="bg-white">
+  
+<!-- Seção de Localização -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-gray-900">
+      <span class="text-yellow-500">Nossa Localização</span>
+    </h2>
 
-    <script>
-        // Adicionar interatividade básica
-        document.addEventListener('DOMContentLoaded', function() {
-            // Adicionar efeito de hover nos cards
-            const cards = document.querySelectorAll('.relative');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.transition = 'transform 0.3s ease';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+      
+      <!-- Lado Esquerdo - Informações -->
+      <div class="w-full lg:w-2/5 space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">VENHA NOS VISITAR E SOLICITE, SEM CUSTO, UM ORÇAMENTO PERSONALIZADO PARA SUA MOTO!</h3>
+          <p class="text-gray-700">Atendemos com agilidade, peças de qualidade e o melhor preço da região.</p>
+        </div>
+
+      <div class="mt-8">
+      <a href="https://wa.me/5588996256876" target="_blank"
+        class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg pulse-glow">
+        <i class="fab fa-whatsapp mr-3"></i> Fale com nossos especialistas agora
+      </a>
+    </div>
+      </div>
+
+      <!-- Lado Direito - Mapa -->
+      <div class="w-full lg:w-3/5 h-[350px] rounded-2xl overflow-hidden shadow-xl border border-gray-300">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.276316716694!2d-39.5838099250186!3d-3.496064743522263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7fe7a8a2f7c8a1d%3A0x3b6c6e9a4a4a4a4a!2sAv.%20Jos%C3%A9%20do%20Patroc%C3%ADnio%2C%20918%20-%20Itapipoca%2C%20CE%2C%2062500-000!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </body>
+  </html>
