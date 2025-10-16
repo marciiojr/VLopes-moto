@@ -1,30 +1,21 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    background-color: #000;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* Hero section responsiva */
 .hero-section {
-    background-image: url('https://i.pinimg.com/originals/b1/2e/dd/b12edd3e7c2b8ecea4d5a1adcbcba2d0.jpg');
+    background-image: url('../assets/HeroVLopes.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     height: 100vh;
     overflow: hidden;
-}
-
-/* Canvas de luzes animadas apenas na hero */
-#beams {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(15px);
-    pointer-events: none;
 }
 
 .overlay {
@@ -45,42 +36,6 @@ body {
     50% {
         opacity: 0.15;
     }
-}
-
-/* Estilos para as seções de produtos - AJUSTADOS */
-.parallax-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    gap: 2rem;
-    padding: 3rem 1rem;
-}
-
-.sticky-image {
-    position: sticky;
-    top: 80px;
-    /* Aumentado para dar mais espaço */
-    height: 70vh;
-    /* Diminuído de 100vh para 70vh */
-    background-size: contain;
-    /* Alterado de cover para contain */
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    /* Fundo para áreas vazias */
-}
-
-.overlay-dark {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.10);
-    /* Aumentada a opacidade */
-    transition: opacity 0.5s ease;
 }
 
 .overlay-text {
@@ -228,8 +183,15 @@ body {
     animation-play-state: paused;
 }
 
-.testimonial-card {
-    margin-bottom: 1rem;
+.testimonial-3d-container {
+    max-width: 100vw !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.testimonial-3d-container > div {
+    max-width: 100% !important;
+    transform: scale(0.95) !important; /* Reduz ligeiramente o tamanho */
 }
 
 /* Estilos para a seção de localização */
@@ -286,3 +248,9 @@ body {
   .card:hover {
     transform: scale(1.03);
   }
+
+  section {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
